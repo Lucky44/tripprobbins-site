@@ -1,5 +1,5 @@
 import './style.css'
-import { initCommonUI, initFooter, typeWriter } from './shared.js'
+import { initCommonUI, initFooter, openModal, closeModal } from './shared.js'
 
 initCommonUI();
 
@@ -8,7 +8,7 @@ const fictionContent = document.createElement('main');
 fictionContent.className = 'container';
 fictionContent.innerHTML = `
     <section id="fiction" class="glass-panel corner-brackets animate-in" style="animation-delay: 0.2s;">
-      <div class="header-coords">LAT: 00.000 LONG: 00.000</div>
+      <div class="header-coords">LAT: 0xFD44 LONG: 0x00A1</div>
       <div class="bottom-corners"></div>
       <div class="mono-accent">DATABASE_ENTRY: LUCKY'S STARS</div>
       <h2>Citizens & Denizens</h2>
@@ -29,209 +29,90 @@ fictionContent.innerHTML = `
         <div class="mono-accent">ACCESSING_DRAFT_FILES...</div>
         <h3 style="font-size: 2rem; margin-top: 1rem;">Sneak Peek: Lucky's Ghosts (Book 2)</h3>
         <p>I'm currently writing the second book of the trilogy. You can read a draft of the first three chapters here!</p>
-        <div class="chapter-links">
-          <button class="glass-link chapter-link" data-chapter="1">Chapter 1</button>
-          <button class="glass-link chapter-link" data-chapter="2">Chapter 2</button>
-          <button class="glass-link chapter-link" data-chapter="3">Chapter 3</button>
+        <div class="chapter-links" style="display: flex; gap: 1.5rem; margin-top: 2rem; flex-wrap: wrap;">
+          <button class="glass-link chapter-trigger" data-chapter="1">INITIALIZE_READ: CH_01</button>
+          <button class="glass-link chapter-trigger" data-chapter="2">INITIALIZE_READ: CH_02</button>
+          <button class="glass-link chapter-trigger" data-chapter="3">INITIALIZE_READ: CH_03</button>
         </div>
       </div>
     </section>
-
-    <div id="reader-modal" class="modal">
-      <div class="modal-content glass-panel">
-        <button class="close-modal">&times;</button>
-        <div id="chapter-body"></div>
-      </div>
-    </div>
 `;
 app.appendChild(fictionContent);
 
-const chapterData = {
-  1: {
-    title: "Chapter 1",
-    content: `<p>LUCKY'S GHOSTS (Copyright 2025)</p>
-  <p>Chapter 1 -----------</p>
-    <p>Plop!</p>
-    <p>Salty started slowly reeling in his fishing line. He sat down with his back against a tall, leafy tree and kept reeling the lure across the lake on microTech. A cool breeze gently shook the tree’s leaves and rippled the sunlit water.</p>
-    <p>Zero and I watched as we relaxed in a grassy patch nearby. “You really think there are fish in there?” Zero called.</p>
-    <p>“Positive,” Salty said.</p>
-    <p>I opened another bottle of ale and laid back on my elbow. A few puffy clouds drifted by lazily. I took a sip, and one of the clouds caught my eye. Its shape was changing in the air currents above us. I thought it looked like petals of a flower.</p>
-    <p>“Zero, do you see that cloud up there,” I said, pointing. He took a sip of the smoky, amber liquid in his glass and looked up.</p>
-    <p>“Which one?”</p>
-    <p>“Over there, to the left more,” I pointed. “It looks like a big flower. See it?”</p>
-    <p>He turned further toward where I was pointing. “OK, I see that. It’s almost like a rose. That’s pretty unusual.”</p>
-    <p>Plop!</p>
-    <p>Salty cast his lure again and started reeling it in.</p>
-    <p>Zero lay back and looked around the sky. I took a sip of ale and laid back flat.</p>
-    <p>“Hmm, look at that one,” Zero said, pointing back over our heads. “I see a stormwal in it, floating through the air.”</p>
-    <p>“It looks more like a marine whale to me.”</p>
-    <p>“Ah, maybe. Definite whaleyness going on though.”</p>
-    <p>“Yeah,” I said, watching the whale form and melt away slowly.</p>
-    <p>Behind us, our Starlancer TAC sat peacefully, its rear ramp open. Having this ship, nicely stocked with food, ammo, medical gear and everything else we could need gave us a perfect mobile base that could also get in a fight and throw some good punches. The money we’d spent outfitting it was well worth it, particularly since we stole the ship when we raided a Nine Tails’ asteroid base six months back.</p>
-    <p>I scanned around the sky and saw a strange cloud. It looked like the neck and head of a dragon, and once I saw that, I started to see a body and tail. I tried to see wings on it but couldn’t quite find them.</p>
-    <p>“Hey, over there, to the right more. It looks kinda like a dragon, with a long neck. And the tail goes down over that way. See it?”</p>
-    <p>“Oh. Yeah, I can sort of see a dragon in that. Looks like it’s getting bigger.”</p>
-    <p>“Look, you can sorta see fangs on its mouth!”</p>
-    <p>Zero chuckled lightly. “Yeah, that’s pretty cool.”</p>
-    <p>“Whoa!” Salty cried out. Zero and I sat up and looked over at him. He was struggling to his feet and trying to control his fishing rod.</p>
-    <p>“Son of a bitch.” He apparently had something big on the line, and he was trying to keep the line from breaking by offering some resistance but letting the line out when it pulled hard. Zero glanced at me in surprise. I nodded. We started walking down toward Salty. He was the only one of the three of us who liked fishing. Zero and I knew next to nothing about “the art of angling,” as Salty liked to call it.</p>
-    <p>“Can we do anything to help?” I asked.</p>
-    <p>“If I can get it close to the shore, you can wade in and grab it. Take the net.”</p>
-    <p>I looked around at his gear spread out on the ground by the tree. There was a net with a short handle. The opening was oval-shaped and about a half a meter long. I grabbed it. For the next three minutes, Salty cursed and played with the line, reeling it in and sometimes letting it out.</p>
-    <p>“I don’t know what the fuck this thing is, but it sure has a lot of fight in it,” he said. “But I think he’s starting to wear down. Get ready to go into the water.”</p>
-    <p>I took my boots off and rolled my pant legs up to my knees. Then I went down and stepped into the cool, dark blue water. About five meters away, the fish broke the surface, flapping wildly. It was over a meter long, and thick-bodied, with a large head.</p>
-    <p>“Come on, baby,” Salty coaxed. “Come to daddy,” he said as he slowly reeled it in further. The line got closer to the shore, and the silvery fish leapt out of the water just a couple meters from me, splashing and thrashing.</p>
-    <p>“Get him, Lucky! Go grab him!”</p>
-    <p>“That thing is huge. I can’t fit that in this net.”</p>
-    <p>“Just get its head. The tail can hang out.”</p>
-    <p>I was skeptical, but I waded a step further into the water, reaching the net out toward the fish. I felt the net hit something solid, and the fish swam into the net. It pulled so hard that I stumbled forward, almost falling, and letting go of the net.</p>
-    <p>Snap! The line broke and the far end disappeared quickly into the water.</p>
-    <p>“Motherfucker! We had him!”</p>
-    <p>I stood there, thigh-deep in the lake and turned toward Salty. “That was a monster, Salty, I couldn’t hold him.”</p>
-    <p>“Look out!” Zero called.</p>
-    <p>Instinctively, I turned back to the lake, but I saw only gentle ripples from the breeze. I whipped back toward Zero, who was already running toward our ship, up the grassy slope.</p>
-    <p>“What?” I yelled out. I saw Salty running toward the open back ramp of the ship. I was nearly 100 meters from it.</p>
-    <p>Suddenly I understood the situation.</p>
-    <p>The sound of a ship’s engines was growing, and the Doppler effect told me that it was getting closer. I looked toward the sound and saw a silver Cutlass coming toward us fast, just above the tree line. A burst of red laser fire shot out from the ship toward where Salty and Zero were running. The rounds scorched the grass, narrowly missing the guys, who kept running for the Starlancer’s open ramp.</p>
-    <p>Hoping they hadn't seen me, I crouched down into the water. The Cutlass slowed as it got closer, firing another burst from the ship’s lasers. One energy round caught Salty in the leg, burning a hole through his left calf and sending him tumbling along the ground. Another nailed Zero squarely in the chest. He stumbled a couple more steps then fell still.</p>
-    <p>The Cutlass came to a hovering stop above us. I saw Salty on the ground, snarling as he futilely tried to stop the bleeding on his calf. I could see a door gunner pivot his gun over to Salty. And I noticed a half dozen warriors in armor marked with the magenta insignia of Nine Tails standing near the Cutlass’s door. Salty held his bloody right hand up to the ship and extended his middle finger. “Fuck you assholes!”</p>
-    <p>The door gunner didn’t take kindly to that and released a long burst of bullets into Salty. He was dead immediately. I scanned around for Zero, hoping he wasn’t badly injured. I saw him on the grass, his red blood staining the green as he tried in vain to stand up. Then he fell over on his face.</p>
-    <p>I ducked under the water and swam sideways down the shore of the lake. I tried to get at least a meter deep so my swimming wouldn’t ripple the surface water. I swam as far as I could in one breath then slowly poked my nose and eyes above the water. I looked up and back at the Cutlass. It was landing gently in the grass near the Starlancer. Troops jumped out both sides of the ship, rifles ready. I was still less than 100 meters from them; I didn’t see any of them looking at me, so I took a breath and went under. I swam further down the shore and a little farther out in the lake.</p>
-    <p>I came up slowly and took a breath; the earthy smell of the lake water was comforting somehow. When I looked back toward the Cutlass, I could see the Nine Tails some of the people now walking toward the lake. One of them pointed at me, and my heart sank. I ducked underwater and swam farther down the shore. Underwater, I could see some reeds growing ahead of me along the shore, so I headed for them. But I had to take another breath before I could get to them. I popped my head up and looked back at the Nine Tails soldiers. I saw one down on one knee, aiming a rifle at me. I grabbed a breath.</p>
-    <p>The last thing I remember was the sight of a bullet coming at my face – I think I really saw it! – and my head getting knocked back under the water. Then the sound of the gun registered, and everything went black.</p>`
-  },
-  2: {
-    title: "Chapter 2: The Care Center",
-    content: `<p>The hospital at New Babbage is really pretty fancy.They call it a “Care Center,” but I’m old and traditional in some ways, so I think of it as a hospital.Whatever.That’s where I came back to consciousness.</p>
-      <p>Before I even opened my eyes, I heard the sounds of the place. The fans circulating filtered air hummed, and a machine off to my left was gently going “ping” every 10 seconds or so. When I opened my eyes, the low, bluish lighting still felt bright until my pupils adjusted. Look, I like science, I really do. But I have no training in high-level biology or regeneration or anything like that. So when I talk about “regenerating” a human being, I am talking only as a layman. What I understand about it is that I paid a bunch of credits to BiotiCorp, went to a facility where they put me in this sphere thing, it somehow scanned me – both body and mind, I guess – and then it stored the “imprint.” Then, through some sort of quantum entanglement feature, if I die, my imprint will be used to regenerate a new version of me, complete with all my memories up till the moment I died.–Basically, it’s magic to me.</p>
-      <p>I don’t need to understand how it works, as long as it works. And, for a while, anyway, it does work. But eventually, the imprint gets too much “trauma” or something and starts to wear out. After some limited number of regenerations, it won’t work anymore. Then you’re just dead.</p>
-      <p>I could still count on one hand the number of times I’d had to regenerate. But for me, at 64, time was getting shorter. –I should be clear: this is no fountain of youth. When you regenerate, you are the same age as when you died, not the age when you last recorded an imprint. So I was still 64, and my imprint was wearing out, they told me. Great.</p>
-      <p>After I got up and got dressed, I went to the cafeteria and got some hot Earl Grey. As I sat dunking my tea bag, my mobiGlas buzzed. I popped up the holographic display and saw an incoming hail from Zero. I hit ACCEPT. I saw a simple hologram version of Zero looking subdued.</p>
-      <p>“Hey, so how’s your day going?” I said. Zero didn’t respond. I knew him well enough to know that something like this had the potential to really get him down.</p>
-      <p>“Oh, let’s not focus on the bad news here – so we lost our awesome ship, got killed, used up a regen, and we’re kind of hard up for money. Big deal! Right? Look at the bright side!” I said smiling, comically. I paused, still smiling broadly, eyebrows raised. I blinked a couple times.</p>
-      <p>“What’s the bright side?” Zero asked.</p>
-      <p>“Eh, I’m working on that part.”</p>
-      <p>“Yeah.” He shook his head. “Have you heard from Salty yet? Did he regen? Was his IVS getting low?”</p>
-      <p>I tried to keep a brave face. “I don’t think his score was that low. –I just got up and got some tea. I haven't heard anything from him.” My heart sank a bit though. I would have expected Salty to get in touch. Could he not have a regen left?</p>
-      <p>Zero frowned. It looked like he was still in a hospital gown, and the room behind him looked like the one where I had regenerated. “Where are you, Zero? I’m in the Brentwood cafeteria.”</p>
-      <p>“Yeah, upstairs. I’ll come down in a minute.”</p>
-      <p>“Cool. See you then.” I said and closed the connection.</p>
-      <p>“We shoulda’ had that fuckin’ fish,” a voice behind me said.</p>
-      <p>I stood up and turned around.</p>
-      <p>“Yeah, you really pulled too hard there at the end,” I said, looking down at the ground.</p>
-      <p>“No, no. It was clearly because you let go of the net, putting too much pressure on the line. I had been managing that thing fine for five minutes.”</p>
-      <p>“I never said I knew what I was doing–”</p>
-      <p>“Which is clearly true.”</p>
-      <p>“It was your responsibility as the ‘master angler’ to tell me what to do.”</p>
-      <p>“If I always took the time to tell you what to do, we’d never get anything done.”</p>
-      <p>I looked up. Salty looked a little different somehow, but I couldn’t put my finger on it. My attempt to keep a straight face failed, and then Salty’s did too. He pointed to my tea. “Earl Grey?”</p>
-      <p>“Mmhm.”</p>
-      <p>“Yeah, I think I need something to drink.” I nodded, and he turned toward the beverage section. He returned with a yellow-green bottle of Cruz Lux and sat down. He twisted the cap open and took a long pull. Over his shoulder, I saw Zero approaching across the room. He saw us, and a warm smile crept gently onto his face. He walked up behind Salty and put a hand on his shoulder. Salty glanced up, smiled subtly, and patted Zero’s hand twice.</p>
-      <p>“I think I’ll get a drink too,” Zero said. I nodded, and he walked over to the drinks.</p>
-      <p>I opened my mobi and went to the finance section. It said my balance was just over 78,000 credits. We weren’t broke, but we didn’t have a ship. I looked to Salty. “You have any significant bank at this point?”</p>
-      <p>He popped his mobiGlas open and said, “If you consider 7421 UEC significant.”</p>
-      <p>Zero returned to the table with a cup of coffee.</p>
-      <p>“Zero, how’s your bank situation?”</p>
-      <p>“Bad.”</p>
-      <p>“How bad is bad?”</p>
-      <p>“I think I have just over 10k,” he said.</p>
-      <p>“OK then. We have something close to 95k between us, I guess.”</p>
-      <p>“All that shit we’d been putting on the ship,” Salty said darkly.</p>
-      <p>As much as I wanted to make a joke, I knew we needed some time to grieve. “Yeah, it really sucks.”</p>
-      <p>Zero was silent.</p>
-      <p>“I mean, I do really hate that ship,” Salty said.</p>
-      <p>“Yeah, I think when you named it <em>The Pig</em> we got the idea.”</p>
-      <p>“It really flew like shit. It was slow and unmaneuverable. Like flying a house.”</p>
-      <p>“Yeah.”</p>
-      <p>We sat and sipped silently for a couple minutes.</p>
-      <p>I broke the silence. “You guys think they tracked the ship to us?”</p>
-      <p>“I’ve been thinking about it,” Zero said. “If they could have tracked it, why would they wait a half a year to come for it?”</p>
-      <p>“Yup, it’s not like they needed to assemble a huge fuckin’ fleet or anything,” Salty said.</p>
-      <p>“And it’s not like there weren't other times when they could have caught us unprepared,” I added.</p>
-      <p>“Maybe they couldn’t track it, so they had to track us down,” Zero said.</p>
-      <p>“Seems likely to me,” I said. “Not that it matters now.”</p>
-      <p>“Nope, it’s a fuckin’ memory.”</p>
-      <p>“They sure knew where we were today, though,” I said.</p>
-      <p>“They definitely did. They knew exactly where we were silence,” Zero said.</p>
-      <p>“I’m pretty sure I know the answer to this, but I’ll ask anyway: it’s not worth trying to get that ship back, is it?”</p>
-      <p>“Hell no,” Salty said.</p>
-      <p>Zero was shaking his head.</p>
-      <p>“And do you think that Nine Tails is done with us now, or do we still need to worry about them?”</p>
-      <p>“As I was lying there, bleeding out,” Zero said. “I heard one of them say something about having taught us a good lesson. I don't know how serious or literal that was, but it’s something.”</p>
-      <p>“Yeah,” I said, “I think they probably count our debt paid: they took the ship and killed all three of us–”</p>
-      <p>“Oh shit!” Salty cut in.</p>
-      <p>Zero and I turned to him. “They killed us three, but what about Freight, Meeka and J?”</p>
-      <p>“Oh shit,” I said. “Let’s check on them.”</p>
-      <p>“Freight’s pretty gone now,” Zero said. “I mean, in theory, they could track him down on Terra, but that’s a long way to go.”</p>
-      <p>Our good friend FreightTrainJim, who had been central to our escapade six months back, had been working at a medical facility in Pyro’s Ruin Station. But about four months ago, he met a woman, and they hit it off so well that they left Pyro for the Terra system, and they settled on Terra III recently. Meeka and J had both gone back to their jobs at Grim Hex. We were in touch with them now and then. J had even joined us on a couple bounty contracts, which was fun.</p>
-      <p>“I feel like we should check in on J and Meeka at Grim, you know?” I said. “Why don’t we drop in on them?”</p>
-      <p>“How would we do that without a ship?” Salty asked.</p>
-      <p>“Oh man.” I guess I hadn’t absorbed the loss completely. I sighed. “Well, let’s just message them.”</p>
-      <p>In short order, we heard from both J and Meeka, and they seemed safe enough. But we told them what had happened and warned them about Nine Tails. J was defiant: “Bring ‘em on! I’ll fillet each one slowly.”</p>
-      <p>But Meeka was – not surprisingly – low key about it. “Mmm, I don’t think they’re coming for us.”</p>
-      <p>“What makes you say that?” Salty asked.</p>
-      <p>“I dunno. It just feels like they don’t care.”</p>
-      <p>I knew Meeka and their empath ways well enough to know if it felt true to them, it was probably true.</p>`
-  },
-  3: {
-    title: "Chapter 3: The Message",
-    content: `<p><em>Bzzzt</em>. My mobi vibrated on my wrist.Glancing at it, I got a pit in my stomach when I saw there was a video message from a woman with green hair.</p>
-      <p>“What is it?” Salty asked.</p>
-      <p>“Do you remember Lieutenant Anderson from the Nine Tails’ asteroid base where we rescued Freight?”</p>
-      <p>“That hardass we couldn’t talk our way past? Green hair?”</p>
-      <p>“Yeah. It’s a message from her.”</p>
-      <p>We were still sitting at a table in the cafeteria at the hospital. “Let’s find a more private place to watch this,” I said. Zero and Salty nodded and we walked out of there into the lobby area.</p>
-      <p>Zero pointed to the big window looking out on the frozen lake. “Let’s go over there. No one’s around.”</p>
-      <p>We walked past the ASOP terminals where a couple guys in armor, carrying rifles were whispering to each other. I put my back to the window; Salty and Zero got on either side of me, and I called up the video message so it faced the window.</p>
-      <p>The hologram of a middle-aged woman with green hair pulled back tightly popped up. Her face had the lines of hard living. That perception may have been influenced by my memory of our brief encounters with her. She was as tough as they come. I hit the play button.</p>
-      <p>“Hey dickwad, how’d your regen go?” she said, dripping with sarcasm. “Hope you don’t mind that we took that Starlancer back. We found a lot of supplies in it – nice stuff, really. Thanks for stocking the ship so well. We'll put it to good use. –Oh, one more thing: if we ever cross paths with you assholes again, we will stomp your shit so hard there won’t be any regenning after that. That’s a promise.” She just stared at the camera for a couple seconds, then it ended.</p>
-      <p>“I gotta hand it to her: she’s good at being shitty,” Salty said.</p>
-      <p>“Yup,” I said. “And as shitty as that makes me feel, there is a piece of good news there, right?”</p>
-      <p>“Yeah, it sounds like they’re counting the score even now silence,” Zero said.</p>
-      <p>“I’d prefer not to run into her again. I don’t think that was an idle threat.”</p>
-      <p>“No, i think we should steer clear of Nine Tails in general for quite a while silence,” Salty said.</p>
-      <p>“Yeah… So speaking of our future,” I said. “I have a plan.”</p>
-      <p>“Oh shit,” Salty said, shaking his head. “Let me guess: you want to go begging Mendies for help?”</p>
-      <p>“Well, not exactly.”</p>
-      <p>“Oh seriously, Lucky?” Salty scowled. “You want to go to the leader of one of the biggest crime syndicates in five star systems for help?”</p>
-      <p>“The guy likes us.”</p>
-      <p>“Are you so sure?” Salty snapped. “We THINK he liked us last year when we helped him get his hands on some dangerous – and illegal – AI shit. But we still don't know if it was really him behind the million-credit gift we got. We have no evidence! And even if he DOES like us, he’s still a fucking crime lord!”</p>
-      <p>“Hey, we’re in a public place, you guys,” Zero said quietly.</p>
-      <p>“Yeah, you’re right. You’re right.” Salty looked up at the ceiling and exhaled deeply. “I’m going to walk around a little. I’ll be back in 10,” Salty said as he walked off without looking at me.</p>
-      <p>When he was out of earshot, I turned to Zero. “What do you think? Is it worth asking Mendies for a little loan or something?”</p>
-      <p>Zero sighed and shook his head. “I don’t know. I mean, I think you’re right: all the signs say he was happy with us and gave us those credits. And Meeka’s friend in the Otoni syndicate did say he was happy with us.”</p>
-      <p>“Right, and he helped us get Freight. That was a big deal.”</p>
-      <p>“True. It’s just that he’s, basically, a really serious criminal. It’s kind of risky being associated with him.”</p>
-      <p>“Yeah, but it’s not like we’re going to be joining his syndicate, you know?”</p>
-      <p>“Not so sure. In the eyes of the UEE, any connection is a guilty connection.”</p>
-      <p>I sighed. “Well, I don’t know. There are degrees of association, right?</p>
-      <p>“From what I know of the UEE, there are, but it also depends on who would be dealing with us and the mood they’re in.”</p>
-      <p>“Fair. I guess I'm just thinking if we took a loan from him, that’s not really a crime, right?</p>
-      <p>“Usually.”</p>
-      <p>“Plus, they’d have to catch us. And they’d have to care enough to bother with something minor like that.”</p>
-      <p>“The odds are probably with us, but there are still a lot of risks associated with getting involved with being in debt to a criminal syndicate.”</p>
-      <p>I nodded and shrugged. Zero turned and looked out across New Babbage’s frozen lake. I moved over beside him and looked out into the gently falling snow. A tram whizzed through the clear tunnels over the lake, toward the city. The sun was going down, and the orange glow on the snow-covered landscape was pretty gorgeous. The glowing colored lights on some of the city’s big buildings had started to come on.</p>
-      <p>“So where did you grow up over there?”</p>
-      <p>Zero didn’t reply for a couple beats. Then he lifted his hand and pointed to the left of the tallest building, still staring. “Over there. Big building with small apartments.”</p>
-      <p>“OK, assholes, who's hungry?”</p>
-      <p>I turned around to see Salty licking a half-eaten ice cream cone and holding two others in his left hand.</p>`
+let chapters = null;
+
+async function loadChapters() {
+  try {
+    const response = await fetch('/data/chapters.json');
+    chapters = await response.json();
+  } catch (error) {
+    console.error('Failed to load chapters:', error);
   }
-};
+}
 
-const modal = document.querySelector('#reader-modal');
-const chapterBody = document.querySelector('#chapter-body');
-const closeBtn = document.querySelector('.close-modal');
+function openReader(chapterId) {
+  if (!chapters) return;
+  const chapter = chapters[chapterId];
+  if (!chapter) return;
 
-document.querySelectorAll('.chapter-link').forEach(link => {
-  link.addEventListener('click', (e) => {
-    const id = e.target.dataset.chapter;
-    const chapter = chapterData[id];
-    chapterBody.innerHTML = `<h2>${chapter.title}</h2>${chapter.content}`;
-    modal.classList.add('active');
+  const idNum = parseInt(chapterId);
+  const hasNext = !!chapters[idNum + 1];
+  const hasPrev = !!chapters[idNum - 1];
+
+  const readerHtml = `
+        <div class="reader-view">
+            <div class="reader-scanline"></div>
+            <div class="reader-metadata">
+                <div>DOC_TYPE: SNEAK_PEEK // SOURCE: LUCKY_GHOSTS</div>
+                <div>SECURE_TRANS_ID: RD_${chapterId.padStart(2, '0')}</div>
+            </div>
+            
+            <div class="decryption-effect">
+                <div class="reader-body" id="reader-scroll-target">
+                    <h2 class="scifi-font" style="margin-bottom: 0.5rem; text-fill-color: initial; -webkit-text-fill-color: var(--accent-color);">${chapter.title}</h2>
+                    <div class="mono-accent" style="margin-bottom: 2.5rem; opacity: 0.6;">SUB_TITLE: ${chapter.subtitle || 'UNNAMED_ENTRY'}</div>
+                    ${chapter.content}
+                </div>
+            </div>
+
+            <div class="reader-controls">
+                ${hasPrev ? `<button class="glass-link reader-nav" data-target="${idNum - 1}" style="min-width: 150px;">&lt;&lt; PREV_CH</button>` : '<div></div>'}
+                <button class="cta-button" onclick="const m = document.querySelector('.modal'); m.classList.remove('active');" style="padding: 0.6rem 2rem; font-size: 0.8rem;">CLOSE_DATA_LOG</button>
+                ${hasNext ? `<button class="glass-link reader-nav" data-target="${idNum + 1}" style="min-width: 150px;">NEXT_CH &gt;&gt;</button>` : '<div></div>'}
+            </div>
+        </div>
+    `;
+
+  openModal(readerHtml, true);
+
+  // Scroll to top of modal content
+  const modalContent = document.querySelector('.modal-content');
+  if (modalContent) modalContent.scrollTop = 0;
+
+  // Attach navigation events
+  document.querySelectorAll('.reader-nav').forEach(btn => {
+    btn.addEventListener('click', () => {
+      const targetId = btn.getAttribute('data-target');
+      const body = document.querySelector('.decryption-effect');
+      body.style.opacity = '0';
+      body.style.transform = 'translateY(10px)';
+      body.style.transition = 'all 0.3s ease';
+
+      setTimeout(() => {
+        openReader(targetId);
+      }, 300);
+    });
+  });
+}
+
+// Initialize triggers after loading
+loadChapters().then(() => {
+  document.querySelectorAll('.chapter-trigger').forEach(trigger => {
+    trigger.addEventListener('click', () => {
+      const chapterId = trigger.getAttribute('data-chapter');
+      openReader(chapterId);
+    });
   });
 });
-
-closeBtn?.addEventListener('click', () => modal.classList.remove('active'));
-window.addEventListener('click', (e) => { if (e.target === modal) modal.classList.remove('active') });
 
 initFooter();

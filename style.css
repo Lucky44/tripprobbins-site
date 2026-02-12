@@ -1057,3 +1057,88 @@ h2 {
   margin-bottom: 0.5rem;
   opacity: 0.8;
 }
+
+/* Deep Space Reader Experience */
+.reader-view {
+  max-width: 800px;
+  margin: 0 auto;
+  position: relative;
+}
+
+.reader-metadata {
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 1px solid rgba(6, 182, 212, 0.2);
+  padding-bottom: 1rem;
+  margin-bottom: 3rem;
+  font-family: var(--font-mono);
+  font-size: 0.7rem;
+  color: var(--accent-color);
+}
+
+.reader-body {
+  font-family: 'Newsreader', 'Georgia', serif;
+  font-size: 1.25rem;
+  line-height: 1.8;
+  color: var(--text-primary);
+  letter-spacing: 0.01em;
+}
+
+.reader-body p {
+  margin-bottom: 1.5rem;
+}
+
+.reader-controls {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 4rem;
+  padding-top: 2rem;
+  border-top: 1px solid rgba(6, 182, 212, 0.1);
+}
+
+.reader-scanline {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(transparent 0%,
+      rgba(6, 182, 212, 0.03) 50%,
+      transparent 100%);
+  background-size: 100% 4px;
+  pointer-events: none;
+  z-index: 5;
+  animation: reader-scan 8s linear infinite;
+}
+
+@keyframes reader-scan {
+  from {
+    transform: translateY(-100%);
+  }
+
+  to {
+    transform: translateY(100%);
+  }
+}
+
+.decryption-effect {
+  overflow: hidden;
+  position: relative;
+}
+
+.decryption-effect::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: var(--bg-color);
+  animation: decrypt-reveal 1.5s cubic-bezier(0.4, 0, 0.2, 1) forwards;
+}
+
+@keyframes decrypt-reveal {
+  0% {
+    transform: scaleY(1);
+    transform-origin: top;
+  }
+
+  100% {
+    transform: scaleY(0);
+    transform-origin: top;
+  }
+}
