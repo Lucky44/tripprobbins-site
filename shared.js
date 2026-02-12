@@ -29,7 +29,7 @@ export function initCommonUI() {
           <a href="/starcitizen.html">Star Citizen</a>
           <a href="/journalism.html">Journalism</a>
           <a href="/software.html">Software</a>
-          <a href="/newsletter.html">Newsletter</a>
+          <a href="/makecontact.html">Make Contact</a>
         </div>
       </div>
     `;
@@ -121,8 +121,99 @@ export function initFooter() {
         footer.className = 'container';
         footer.style.marginTop = '4rem';
         footer.style.paddingBottom = '4rem';
-        footer.innerHTML = `<p style="opacity: 0.5; font-size: 0.8rem;">&copy; ${new Date().getFullYear()} Tripp Robbins. DATA_LOG_SYNC: COMPLETE</p>`;
+        footer.innerHTML = `
+            <div style="display: flex; justify-content: space-between; align-items: center; border-top: 1px solid rgba(6, 182, 212, 0.1); padding-top: 2rem;">
+                <p style="opacity: 0.5; font-size: 0.8rem; margin: 0;">&copy; ${new Date().getFullYear()} Tripp Robbins. DATA_LOG_SYNC: COMPLETE</p>
+                <div class="footer-links">
+                    <button id="contact-trigger" class="glass-link scifi-font" style="min-width: auto; padding: 0.4rem 1rem; font-size: 0.7rem; opacity: 0.6;">INITIALIZE_COMMS (CONTACT)</button>
+                </div>
+            </div>
+        `;
         app.appendChild(footer);
+
+        document.getElementById('contact-trigger')?.addEventListener('click', openContactModal);
+    }
+}
+
+export function openContactModal() {
+    const contactHtml = `
+        <div class="header-coords">PROTOCOL: COMMS_ESTABLISH</div>
+        <div class="mono-accent">DIRECT_UPLINK: TRI_ROBBINS</div>
+        <h2 class="scifi-font" style="margin: 1.5rem 0;">Initialize Comms</h2>
+        <p style="margin-bottom: 2rem; opacity: 0.8;">Transmit your query to the central hub. Safe-link encryption active.</p>
+        
+        <form id="contact-form" action="https://formspree.io/f/mojnedpl" method="POST" style="display: flex; flex-direction: column; gap: 1.5rem;">
+            <div class="form-field">
+                <label class="hud-label" for="contact-name">Identity</label>
+                <div class="hud-input-wrapper">
+                    <div class="mono-accent">NAME:</div>
+                    <input type="text" id="contact-name" name="name" class="hud-input" placeholder="ENTER NAME..." required>
+                </div>
+            </div>
+            
+            <div class="form-field">
+                <label class="hud-label" for="contact-email">Return Path</label>
+                <div class="hud-input-wrapper">
+                    <div class="mono-accent">EMAIL:</div>
+                    <input type="email" id="contact-email" name="email" class="hud-input" placeholder="ENTER RETURN ADDRESS..." required>
+                </div>
+            </div>
+            
+            <div class="form-field">
+                <label class="hud-label" for="contact-message">Transmission Data</label>
+                <div class="hud-input-wrapper" style="height: auto;">
+                    <textarea id="contact-message" name="message" class="hud-textarea" placeholder="ENTER MESSAGE CONTENT..." required></textarea>
+                </div>
+            </div>
+            
+            <div class="form-status" id="contact-status">
+                <div><span class="status-indicator"></span> STANDBY...</div>
+                <div>SECURE_LINE_0xAF44</div>
+            </div>
+            
+            <div style="margin-top: 2rem; text-align: right;">
+                <button type="submit" class="cta-button primary" id="contact-submit" style="min-width: 250px;">TRANSMIT_DATA</button>
+            </div>
+        </form>
+    `;
+
+    openModal(contactHtml);
+
+    const form = document.getElementById('contact-form');
+    const status = document.getElementById('contact-status');
+    const submitBtn = document.getElementById('contact-submit');
+
+    if (form) {
+        form.onsubmit = async (e) => {
+            e.preventDefault();
+            const formData = new FormData(form);
+
+            submitBtn.innerText = 'TRANSMITTING...';
+            submitBtn.disabled = true;
+            status.innerHTML = '<div><span class="status-indicator pulse"></span> UPLOADING_TO_SERVER...</div><div>SEC_0xAF44</div>';
+
+            try {
+                const response = await fetch(form.action, {
+                    method: 'POST',
+                    body: formData,
+                    headers: { 'Accept': 'application/json' }
+                });
+
+                if (response.ok) {
+                    status.innerHTML = '<div><span class="status-indicator" style="background: var(--accent-color);"></span> SUCCESS: TRANSMISSION_RECEIVED</div><div>LOG_SEQ_ACK</div>';
+                    form.reset();
+                    submitBtn.innerText = 'TRANSMISSION_COMPLETE';
+                    setTimeout(() => closeModal(), 2500);
+                } else {
+                    const data = await response.json();
+                    throw new Error(data.error || 'General transmission failure.');
+                }
+            } catch (err) {
+                status.innerHTML = `<div><span class="status-indicator" style="background: #ef4444;"></span> ERROR: ${err.message.toUpperCase()}</div><div>ERR_0x00ED</div>`;
+                submitBtn.innerText = 'RETRY_TRANSMISSION';
+                submitBtn.disabled = false;
+            }
+        };
     }
 }
 

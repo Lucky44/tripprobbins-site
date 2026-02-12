@@ -10,7 +10,7 @@ export default defineConfig({
                 starcitizen: 'starcitizen.html',
                 journalism: 'journalism.html',
                 software: 'software.html',
-                newsletter: 'newsletter.html',
+                makecontact: 'makecontact.html',
             },
         },
     },

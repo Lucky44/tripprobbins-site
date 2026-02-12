@@ -2,20 +2,22 @@
 
 All notable changes to this project will be documented in this file.
 
-## [Unreleased] - 2026-02-11
+## [1.1.0] - 2026-02-12
 
 ### Added
-- **Software Sector Launch**: Fully implemented the "Digital Messing About" page.
-- **Star Citizen Component Tracker (v0.88)**: Dedicated project pane with interactive image modal and detailed audit list.
-- **Functional Assets Section**: Curated grid of 9 essential Star Citizen community tools (Erkul, Fleetyards, etc.).
-- **Interactive Screenshot Engine**: New modal system in `shared.js` to view project captures in high resolution.
-- **Tactile Feedback**: Added `:active` states to all primary buttons for better physical click confirmation.
+- **Global Communication Hub**: Integrated an encrypted direct messaging system powered by Formspree.
+- **HUD-Style Contact Modal**: Custom modal interface for secure transmissions (`shared.js`).
+- **Comm Link Footer**: Added `INITIALIZE_COMMS` portal to the global footer layout.
+- **Website Update Log**: Added the first "Musing" regarding the cinematic HUD overhaul.
 
 ### Changed
-- **Performance & Stability**: Stabilized the "Glitch" hover animation to remove jitter from click targets, ensuring 100% reliable navigation.
-- **Visual Hierarchy**: Enlarged project headlines and improved vertical alignment between text and visuals in project panes.
-- **Software Description**: Updated SC Component Tracker description with a personal "origin story" for the tool.
-- **Heading Standardization**: Transitioned specific technical sections to high-legibility fonts (Orbitron) while maintaining the Wallpoet aesthetic for cinematic headers.
+- **Branding Evolution**: Rebranded "Newsletter" sector to "Make Contact" with a unified communication dual-pane design.
+- **Layout Optimization**: Synchronized horizontal alignment across communication panes for a balanced HUD interface.
+- **Navigation Update**: Updated primary navigation and file architecture to reflect the "Make Contact" paradigm.
+- **Musings Refinement**: Optimized the front-page stream to remove artifacts (borders) on terminal entries.
 
 ### Removed
-- **Workout Tracker Pane**: Archived the Workout Tracker section from the Software page (code remains in comments for future use).
+- **Legacy Files**: Deactivated and removed `newsletter.html` and `newsletter.js` in favor of the new `makecontact` architecture.
+- **Placeholder Streams**: Cleared legacy content from the musings data feed.
+
+## [1.0.0] - 2026-02-11

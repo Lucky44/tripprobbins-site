@@ -931,78 +931,121 @@ h2 {
     padding: 2rem;
   }
 }
+
 /* HUD Form Styling */
 .form-group {
-    margin-top: 3rem;
-    position: relative;
-    max-width: 500px;
-    margin-left: auto;
-    margin-right: auto;
+  margin-top: 3rem;
+  position: relative;
+  max-width: 500px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .hud-input-wrapper {
-    position: relative;
-    border: 1px solid var(--border-color);
-    background: rgba(0, 0, 0, 0.4);
-    display: flex;
-    align-items: center;
-    padding: 0 1rem;
-    height: 3.5rem;
-    transition: all 0.3s ease;
+  position: relative;
+  border: 1px solid var(--border-color);
+  background: rgba(0, 0, 0, 0.4);
+  display: flex;
+  align-items: center;
+  padding: 0 1rem;
+  height: 3.5rem;
+  transition: all 0.3s ease;
 }
 
 .hud-input-wrapper:focus-within {
-    border-color: var(--accent-color);
-    box-shadow: 0 0 15px var(--accent-glow);
+  border-color: var(--accent-color);
+  box-shadow: 0 0 15px var(--accent-glow);
 }
 
 .hud-input-wrapper .mono-accent {
-    font-size: 0.7rem;
-    opacity: 0.5;
-    margin-right: 1rem;
-    white-space: nowrap;
+  font-size: 0.7rem;
+  opacity: 0.5;
+  margin-right: 1rem;
+  white-space: nowrap;
 }
 
 .hud-input {
-    background: none;
-    border: none;
-    color: var(--text-primary);
-    font-family: var(--font-mono);
-    font-size: 1rem;
-    width: 100%;
-    outline: none;
+  background: none;
+  border: none;
+  color: var(--text-primary);
+  font-family: var(--font-mono);
+  font-size: 1rem;
+  width: 100%;
+  outline: none;
 }
 
 .hud-input::placeholder {
-    color: var(--text-secondary);
-    opacity: 0.3;
+  color: var(--text-secondary);
+  opacity: 0.3;
 }
 
 .form-status {
-    margin-top: 1rem;
-    font-family: var(--font-mono);
-    font-size: 0.7rem;
-    color: var(--text-secondary);
-    display: flex;
-    justify-content: space-between;
-    opacity: 0.8;
+  margin-top: 1rem;
+  font-family: var(--font-mono);
+  font-size: 0.7rem;
+  color: var(--text-secondary);
+  display: flex;
+  justify-content: space-between;
+  opacity: 0.8;
 }
 
 .status-indicator {
-    display: inline-block;
-    width: 8px;
-    height: 8px;
-    background: var(--accent-color);
-    border-radius: 50%;
-    margin-right: 0.5rem;
+  display: inline-block;
+  width: 8px;
+  height: 8px;
+  background: var(--accent-color);
+  border-radius: 50%;
+  margin-right: 0.5rem;
 }
 
 .status-indicator.pulse {
-    animation: statusPulse 1.5s infinite;
+  animation: statusPulse 1.5s infinite;
 }
 
 @keyframes statusPulse {
-    0% { transform: scale(1); opacity: 1; box-shadow: 0 0 0 0 var(--accent-glow); }
-    70% { transform: scale(1.2); opacity: 0.5; box-shadow: 0 0 10px 5px transparent; }
-    100% { transform: scale(1); opacity: 1; box-shadow: 0 0 0 0 transparent; }
+  0% {
+    transform: scale(1);
+    opacity: 1;
+    box-shadow: 0 0 0 0 var(--accent-glow);
+  }
+
+  70% {
+    transform: scale(1.2);
+    opacity: 0.5;
+    box-shadow: 0 0 10px 5px transparent;
+  }
+
+  100% {
+    transform: scale(1);
+    opacity: 1;
+    box-shadow: 0 0 0 0 transparent;
+  }
+}
+
+.hud-textarea {
+  background: none;
+  border: none;
+  color: var(--text-primary);
+  font-family: var(--font-mono);
+  font-size: 1rem;
+  width: 100%;
+  outline: none;
+  min-height: 150px;
+  padding: 1rem 0;
+  resize: none;
+}
+
+.hud-textarea::placeholder {
+  color: var(--text-secondary);
+  opacity: 0.3;
+}
+
+.hud-label {
+  display: block;
+  font-family: var(--font-mono);
+  font-size: 0.7rem;
+  color: var(--accent-color);
+  text-transform: uppercase;
+  margin-bottom: 0.5rem;
+  opacity: 0.8;
 }
