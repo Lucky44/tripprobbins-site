@@ -35,7 +35,7 @@ contactContent.innerHTML = `
         
         <div style="flex-grow: 1; display: flex; flex-direction: column; align-items: center; margin-top: 4rem;">
           <p style="text-align: center; max-width: 600px; margin: 0 auto 3rem auto; min-height: 4.8em; display: flex; align-items: center; justify-content: center;">
-            If you'd like to get occasional updates on my writing - I promise not to spam you or give/sell anyone your info, sign up here.<br>You can unsubscribe below too.
+            If you would like to get occasional updates on my writing<br>(I promise not to spam you or give/sell anyone your info)<br>please sign up here.<br>You can unsubscribe below as well.
           </p>
           
           <div class="form-group" style="width: 100%; margin-top: 0;">
