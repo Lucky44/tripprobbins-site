@@ -920,15 +920,23 @@ h2 {
 
 @media (max-width: 600px) {
   nav {
-    padding: 1rem;
+    padding: 0.75rem 0.5rem;
   }
 
   .nav-links {
-    display: none;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1rem 1.5rem;
+  }
+
+  .nav-links a {
+    font-size: 0.7rem;
+    letter-spacing: 0.05em;
   }
 
   section {
-    padding: 2rem;
+    padding: 1.5rem;
   }
 }
 
