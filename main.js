@@ -75,7 +75,7 @@ async function loadMusings() {
       const linkHref = showModal ? "#" : (entry.link || "#");
 
       return `
-            <div class="musing-item animate-in" style="animation-delay: ${0.4 + (index * 0.1)}s; border-bottom: 1px solid rgba(6, 182, 212, 0.1); padding-bottom: 1.5rem;">
+            <div class="musing-item animate-in" style="animation-delay: ${0.4 + (index * 0.1)}s; border-bottom: ${index === data.length - 1 ? 'none' : '1px solid rgba(6, 182, 212, 0.1)'}; padding-bottom: 1.5rem;">
                 <div class="musing-header" style="display: flex; justify-content: space-between; align-items: baseline;">
                     <div class="mono-accent" style="font-size: 0.7rem;">${entry.date}</div>
                     <div class="musing-id" style="font-size: 0.6rem; opacity: 0.3;">${entry.id}</div>

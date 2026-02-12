@@ -1,23 +1,16 @@
 [
     {
+        "id": "musing_02",
+        "date": "2026.02.12",
+        "title": "Website Update",
+        "summary": "Ooo, Shiny!",
+        "body": "With a little help (OK, actually a lot of help) (Hmm, now I sound like SecUnit...) from Google Antigravity, I have reworked my website to be spiffier and, well, better. I'm also using GitHub Pages to host it. I have added this section, where I'll post occasional thoughts or updates. If you find any problems let me know!"
+    },
+    {
         "id": "musing_01",
         "date": "2026.02.08",
         "title": "LET'S TALK ABOUT MURDERBOT",
         "summary": "I am reading the Murderbot Diaries series and loving it. My editor on \"Lucky's Stars\" suggested them because of the first-person narration in both books, and she was so right.",
         "body": "Readers are probably familiar with Martha Wells' Murderbot Diaries (a series with some offshoot stories) already. I think I was late to the party. But I've read everything that's out, and I'm looking forward to the May, 2026 release of the next book. The way Wells gets into the head of a \"construct\" - a mostly synthetic-but-slightly-organic \"security unit\" - is awesome. I think she has talked about (<a href='https://www.youtube.com/watch?v=lZ0wIHRXq0Y' target='_blank' style='color: var(--accent-color); font-weight: bold;'>(Interview)</a>) how the SecUnit seems kind of like some neurodivergent humans. She talked a little about that in the New Scientist interview. I relate to that sometimes, even if I'm fairly neurotypical. <br><br>I was also glad to hear Wells talk about how she develops her characters and stories. She sounds much more like a \"pantser\" than a \"plotter.\" And I wrote \"Lucky's Stars\" as a confirmed pantser - putting the characters in a situation and then letting the story spin out of my head. I think that's great, but for my second book, I'm doing much more plotting, and I think the book will be better for that."
-    },
-    {
-        "id": "musing_02",
-        "date": "2026.02.05",
-        "title": "JOURNALISM_RECONSTRUCTION",
-        "summary": "Revisiting the coyote features for HMB Magazine. It's interesting how the 'borderlands' between urban and wild still mirror the sectors of the Verse I'm writing about now.",
-        "link": "/journalism.html"
-    },
-    {
-        "id": "musing_03",
-        "date": "2026.01.28",
-        "title": "FICTION_PULSE",
-        "summary": "Lucky's Stars is seeing a surge in reader activity. Drafting some preliminary thoughts on 'Lucky's Ghosts'. The narrative arc is tightening.",
-        "link": "/fiction.html"
     }
 ]
