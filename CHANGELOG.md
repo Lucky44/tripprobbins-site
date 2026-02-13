@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file.
 
+## [1.2.1] - 2026-02-13
+
+### Changed
+- **Navigation UI Overhaul**: Replaced the muted top menu with a high-visibility, tactical HUD bar featuring a glowing cyan glint and active-state indicators.
+- **Label Evolution**: Renamed "Software" to "Apps" in the primary navigation for improved clarity and brevity.
+- **Branding Typography**: Switched navigation font to Rajdhani with bold weights (700) and triple-layered glow effects for maximum readability.
+
 ## [1.2.0] - 2026-02-12
 
 ### Added
