@@ -28,7 +28,7 @@ export function initCommonUI() {
             { href: '/fiction.html', label: 'Fiction' },
             { href: '/starcitizen.html', label: 'Star Citizen' },
             { href: '/journalism.html', label: 'Journalism' },
-            { href: '/software.html', label: 'Software' },
+            { href: '/software.html', label: 'Apps' },
             { href: '/makecontact.html', label: 'Make Contact' }
         ];
 
