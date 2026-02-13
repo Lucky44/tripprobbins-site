@@ -21,15 +21,28 @@ export function initCommonUI() {
     if (!document.querySelector('.sticky-nav')) {
         const nav = document.createElement('nav');
         nav.className = 'glass-panel sticky-nav';
+
+        const currentPath = window.location.pathname;
+        const links = [
+            { href: '/index.html', label: 'Home' },
+            { href: '/fiction.html', label: 'Fiction' },
+            { href: '/starcitizen.html', label: 'Star Citizen' },
+            { href: '/journalism.html', label: 'Journalism' },
+            { href: '/software.html', label: 'Software' },
+            { href: '/makecontact.html', label: 'Make Contact' }
+        ];
+
+        const linkHtml = links.map(link => {
+            // Handle both / and /index.html for home
+            const isActive = (currentPath === link.href) ||
+                (link.href === '/index.html' && (currentPath === '/' || currentPath === ''));
+            return `<a href="${link.href}" class="${isActive ? 'active' : ''}">${link.label}</a>`;
+        }).join('');
+
         nav.innerHTML = `
       <div class="container nav-content">
         <div class="nav-links center-nav">
-          <a href="/index.html">Home</a>
-          <a href="/fiction.html">Fiction</a>
-          <a href="/starcitizen.html">Star Citizen</a>
-          <a href="/journalism.html">Journalism</a>
-          <a href="/software.html">Software</a>
-          <a href="/makecontact.html">Make Contact</a>
+          ${linkHtml}
         </div>
       </div>
     `;
