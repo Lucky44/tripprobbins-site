@@ -34,9 +34,14 @@ softwareContent.innerHTML = `
                     <li>Ability to search all ships and storage for components</li>
                 </ul>
 
-                <div style="margin-top: 2rem; display: flex; gap: 1rem;">
-                    <a href="https://lucky44.github.io/SC-Component-Tracker/" target="_blank" class="cta-button" style="padding: 0.75rem 1.5rem; font-size: 0.8rem;">ACCESS_SYSTEM</a>
-                    <a href="https://github.com/lucky44/SC-Component-Tracker" target="_blank" class="glass-link scifi-font" style="min-width: auto; padding: 0.75rem 1.5rem;">On Github</a>
+                <div style="margin-top: 2rem; display: flex; flex-direction: column; gap: 1.8rem; align-items: flex-start;">
+                    <div style="display: flex; gap: 1rem; flex-wrap: wrap;">
+                        <a href="https://lucky44.github.io/SC-Component-Tracker/" target="_blank" class="cta-button scifi-font" style="padding: 0.75rem 1.5rem; min-width: 160px; display: inline-flex; align-items: center; justify-content: center; font-size: 1rem;">TRY IT!</a>
+                        <a href="https://github.com/lucky44/SC-Component-Tracker" target="_blank" class="glass-link scifi-font" style="min-width: 160px; padding: 0.75rem 1.5rem; display: inline-flex; align-items: center; justify-content: center; font-size: 1rem;">On Github</a>
+                    </div>
+                    <a href="https://docs.google.com/spreadsheets/d/1y5cyht4vvhUgfY9_2TyoJmUt8LUPgWj99CDHuAkYp4I/edit?usp=sharing" target="_blank" class="mono-accent scifi-font" style="text-decoration: none; font-size: 1rem; color: #fff;">
+                        TOP COMPONENTS SPREADSHEET
+                    </a>
                 </div>
             </div>
 

@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file.
 
+## [1.2.2] - 2026-02-15
+
+### Added
+- **Resource Integration**: Added a direct link to the tactical "TOP COMPONENTS SPREADSHEET" within the SC Component Tracker interface.
+- **UI Refinement**: Renamed primary accessibility button to "TRY IT!" and synchronized dimensions/typography across the project action block.
+- **Typography Calibration**: Standardized font sizes and styles for tactical links to match primary navigation buttons.
+
 ## [1.2.1] - 2026-02-13
 
 ### Changed
