@@ -25,30 +25,30 @@ softwareContent.innerHTML = `
         
         <div style="display: flex; gap: 3rem; align-items: flex-start; justify-content: center; flex-wrap: wrap;">
             <div class="project-info" style="flex: 1;">
-                <p>This tool is for Star Citizen players who want to have a local copy (even on a phone) of their ships, their current loadouts, and any extra components/weapons they have in storage. I designed it to help me keep track of loadouts on my 25+ ships and zillions of components while I try to optimize loadouts. -It's not for everyone, but I like it!</p>
+                <p>This tool is for Star Citizen players who want to have a local copy of their ships, the ships' current loadouts, and any extra components/weapons they have in storage. I designed it to help me keep track of loadouts on my 25+ ships and zillions of components while I try to optimize loadouts. -It's not for everyone, but I like it!</p>
                 
                 <ul style="margin: 1.5rem 0; padding-left: 1.5rem; color: var(--text-secondary); font-size: 0.9rem; list-style-type: '>> ';">
                     <li>All files stored on local device - no login needed</li>
                     <li>Ability to backup/share/import your data</li>
-                    <li>Note: you must enter your data; no pulling from game</li>
                     <li>Ability to search all ships and storage for components</li>
+                    <li>Automatically checks for updates and prompts you</li>
+                    <li>Note: you must enter your data; no pulling from game</li>
                 </ul>
+
+                <p style="margin-top: 1.5rem; color: white; font-style: italic; font-size: 0.9rem; margin-bottom: 2rem;">One notice: this is an executable file. It will trigger a Windows warning about downloaded files. To run the app, click the little "More info" button, then click the "Run anyway" button. I can only tell you this is safe, but you're on your own. If you want to review the files, you can find them on Github.</p>
 
                 <div style="margin-top: 2rem; display: flex; flex-direction: column; gap: 1.8rem; align-items: flex-start;">
                     <div style="display: flex; gap: 1rem; flex-wrap: wrap;">
-                        <a href="https://lucky44.github.io/SC-Component-Tracker/" target="_blank" class="cta-button scifi-font" style="padding: 0.75rem 1.5rem; min-width: 160px; display: inline-flex; align-items: center; justify-content: center; font-size: 1rem;">TRY IT!</a>
-                        <a href="https://github.com/lucky44/SC-Component-Tracker" target="_blank" class="glass-link scifi-font" style="min-width: 160px; padding: 0.75rem 1.5rem; display: inline-flex; align-items: center; justify-content: center; font-size: 1rem;">On Github</a>
+                        <a href="https://github.com/Lucky44/SCCT-DB/releases/latest/download/SCCT.exe" target="_blank" class="cta-button scifi-font" style="padding: 0.75rem 1.5rem; min-width: 160px; display: inline-flex; align-items: center; justify-content: center; font-size: 1rem;">DOWNLOAD</a>
+                        <a href="https://github.com/Lucky44/SCCT-DB" target="_blank" class="glass-link scifi-font" style="min-width: 160px; padding: 0.75rem 1.5rem; display: inline-flex; align-items: center; justify-content: center; font-size: 1rem;">On Github</a>
                     </div>
-                    <a href="https://docs.google.com/spreadsheets/d/1y5cyht4vvhUgfY9_2TyoJmUt8LUPgWj99CDHuAkYp4I/edit?usp=sharing" target="_blank" class="mono-accent scifi-font" style="text-decoration: none; font-size: 1rem; color: #fff;">
-                        TOP COMPONENTS SPREADSHEET
-                    </a>
                 </div>
             </div>
 
             <div class="project-visual glass-panel" style="flex: 0 0 300px; padding: 1rem; background: rgba(0,0,0,0.4); cursor: zoom-in;" id="sct-visual-trigger">
-                <div class="mono-accent" style="font-size: 0.6rem; margin-bottom: 0.5rem;">SC_DATA_STREAM: SYSTEM_CAPTURE_v0.88</div>
+                <div class="mono-accent" style="font-size: 0.6rem; margin-bottom: 0.5rem;">SC_DATA_STREAM: SYSTEM_CAPTURE_v0.75.1</div>
                 <div style="background: var(--bg-color); border: 1px solid var(--border-color); position: relative; overflow: hidden; display: flex;">
-                    <img src="assets/SCT_v0_88.png" alt="SC Component Tracker v0.88 Interface" style="width: 100%; height: auto; display: block;">
+                    <img src="assets/SCCT-DB home.png" alt="SCCT-DB Dashboard Interface" style="width: 100%; height: auto; display: block;">
                     <!-- Background grid visual layer -->
                     <div style="position: absolute; inset: 0; opacity: 0.1; background-image: linear-gradient(var(--border-color) 1px, transparent 1px), linear-gradient(90deg, var(--border-color) 1px, transparent 1px); background-size: 20px 20px; pointer-events: none;"></div>
                 </div>
@@ -156,10 +156,10 @@ if (sctTrigger) {
     sctTrigger.onclick = () => {
         openModal(`
             <div class="modal-image-view" style="text-align: center;">
-                <div class="mono-accent" style="margin-bottom: 2rem; opacity: 0.8;">ASSET_VIEW // SC_COMPONENT_TRACKER_V0.88</div>
-                <img src="assets/SCT_v0_88.png" style="width: 100%; height: auto; border: 1px solid var(--border-color); box-shadow: 0 0 50px rgba(0,0,0,0.8);">
+                <div class="mono-accent" style="margin-bottom: 2rem; opacity: 0.8;">ASSET_VIEW // SCCT_DB_DASHBOARD</div>
+                <img src="assets/SCCT-DB home.png" style="width: 100%; height: auto; border: 1px solid var(--border-color); box-shadow: 0 0 50px rgba(0,0,0,0.8);">
                 <div style="margin-top: 2rem; border-top: 1px solid var(--border-color); padding-top: 1.5rem;">
-                    <a href="assets/SCT_v0_88.png" target="_blank" class="glass-link uniform-width" style="text-decoration: none;">OPEN_FULL_RESOLUTION_ASSET</a>
+                    <a href="assets/SCCT-DB home.png" target="_blank" class="glass-link uniform-width" style="text-decoration: none;">OPEN_FULL_RESOLUTION_ASSET</a>
                 </div>
             </div>
         `, true);
