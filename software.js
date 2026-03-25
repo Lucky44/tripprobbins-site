@@ -21,7 +21,7 @@ softwareContent.innerHTML = `
         <div class="bottom-corners"></div>
         <div class="mono-accent">- PROJECT_LOG: SC_COMPONENT_TRACKER -</div>
         
-        <h3 style="margin: 1.5rem 0 1rem 0; color: var(--accent-color); font-size: 1.8rem;">Star Citizen Component Tracker</h3>
+        <h3 style="margin: 1.5rem 0 1rem 0; color: var(--accent-color); font-size: 1.8rem;">STAR CITIZEN COMPONENT TRACKER - DB</h3>
         
         <div style="display: flex; gap: 3rem; align-items: flex-start; justify-content: center; flex-wrap: wrap;">
             <div class="project-info" style="flex: 1;">
