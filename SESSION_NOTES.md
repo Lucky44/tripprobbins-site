@@ -1,7 +1,22 @@
-# Personal Website - Session Notes (Feb 11, 2026)
+# Personal Website - Session Notes
+
+## Session: March 25, 2026
+
+### 1. Deployment Pipeline Fix (GitHub Actions)
+- **Problem**: Website updates (including a new Musing and app updates) were pushed to the local `master` branch but didn't deploy to the live site.
+- **Solution**:
+  - Discovered that the `.github/workflows/deploy.yml` action only triggers on the `main` branch.
+  - Merged the un-deployed `master` branch changes into `main` and pushed the updates to trigger the deployment.
+  - Committed previously unstaged musing script (`scripts/add-musing.js`) and its `package.json` entry into source control.
+
+### 2. UI Quick Fix
+- **Outcome**: Updated the heading text on the Apps page to "STAR CITIZEN COMPONENT TRACKER - DB".
+
+---
+
+## Session: Feb 11, 2026
 
 ## 🏆 Completed in this Session
-
 ### 1. "Digital Messing About" Overhaul
 - **Objective**: Full implementation of the Software sector.
 - **Outcome**: Created a professional hub for Star Citizen tools and external resources.
