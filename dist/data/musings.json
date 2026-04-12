@@ -1,23 +1,30 @@
 [
     {
+        "id": "musing_04",
+        "date": "2026.03.24",
+        "title": "SOME QUICK HITS",
+        "summary": "Here are some slightly related thoughts about Star Citizen’s growth and the “growth” of my next book, “Lucky’s Stars” - coming out in June!",
+        "body": "Star Citizen’s Patch Alpha 4.7 comes out tomorrow, and from all reports (including my dabbling in the Public Test Universe), it’s going to move things forward nicely. As someone who has been following (and backing) this game since it started in 2012, through all the ups and downs, I have to say CIG has really gotten onto a good track since early 2025. There are things to complain about, sure, but it really does seem like they’ve turned a corner in the game’s development. And that’s with a lot of energy going into Squadron 42, the single-player game that’s due out late this year.<br><br>So yay. That makes me happy. –I think. My only fear is that the game will be SO good that I’ll want to spend too much time playing it! And that will mean less time writing, and I like writing! That said, I’m more or less on track to reach my deadline for publishing Book 2 of the Citizens and Denizens trilogy in June. And I have some good plans for Book 3 too. But one thing at a time. “Lucky’s Ghosts” will be a real step up from “Lucky’s Stars” as far as fiction goes. Book 1 was just a romp, a light and playful jaunt through the ‘Verse. But Book 2 gets a little more thoughtful – while still being playful and (I hope) funny. Stay tuned for more chapters coming out on the website this spring!"
+    },
+    {
+        "id": "musing_03",
+        "date": "2026.02.12",
+        "title": "So Funny Story",
+        "summary": "This is just a little about my saga of trying to get \"Lucky's Stars\" in front of the eyeballs of Star Citizen players around the world - well, at least those who read English, for now.",
+        "body": "I wrote this book (and I'm writing the trilogy) primarily for Star Citizen fans. In fact, a friend who is a published sci-fi writer who knows the \"industry\" pretty well advised me not to use the intellectual property around Star Citizen. He said it would keep more options open and maybe reach a wider audience without the SC elements. And I considered that. In fact, I was worried that since no other novels set in the world of SC were available, CIG would not give me permission to publish it - they're legal department was very opaque; they were not into having a chat about the project at all. It felt like the chances that CIG would approve the book for sale were low, but I decided to give it a go. I also started coming up with all the words/things I'd need to change to remove all references to Star Citizen. I have a list still.<br><br>But I really wanted to make the book for \"the community.\" So I submitted it to CIG, through their process, and lo and behold they approved it promptly! Great, right?<br><br>Here's the \"funny\" part: now how to get it in the hands of SC players? I tried Facebook advertising, narrowly focused on the demographic for SC players. I tried paying for promotion on Amazon. And while I got a couple hundred \"followers\" on my Tripp Robbins Writing Facebook page, I don't think most of them are interested in the book, to be honest. So I asked myself where to find more SC players. Answer: Reddit! Spectrum (CIG's forums for the community). Sounds lke a natural, right?<br><br>Nope. I posted about the \"first novel set in the world of Star Citizen approve by CIG for sale is now on Amazon\" in Reddit, and in a half hour, I had a bunch of enthusiastic responss (and some book sales). But by 45 minutes, the post was taken down. The original message I got said it violated the r/starcitizen policies because it used AI. Well, I had included in the post an image I generated with Adobe Firefly that was definitely made with AI. So I took the image out and reposted the message (I think I even rewrote it). And like 20 minutes later I got a message saying I was now banned from the subReddit for repeatedly violating their policy!<br><br>What?? How?? Now I know a lot of people hate forum admins. But I've been a forum admin (in the 90s on AOL!), and I know it's hard. So I politely wrote back and said, \"what do you mean? There's no AI in that post?\" So I went around and around a bit, and I think it was the next day, I got a message saying they had reconsidered the ban and lifted it, but I couldn't promote a commercial book...OR ELSE. I sighed and said OK. -My friend Salty (the real one on whom the character is based) looked at the r/starcitizen policies and said, \"It doesn't say anthing about not promoting things for sale!\" And looking at their rules today, I still don't see anything about not promoting commercial products.<br><br>But wait, there's more! Last fall, I found a post on the subReddit about a novella that someone published with CIG's permission - and that post is still there! <a href='https://www.reddit.com/r/starcitizen/comments/1mdoujd/i_have_published_a_star_citizen_novelette/' target='_blank' style='color: var(--accent-color);'>Link to original post</a><br><br>And to top that off, CIG took down my post on Spectrum telling the community about \"Lucky's Stars\" too!<br><br><b>UPDATE:</b> I wrote to the Reddit mods and shared the story, asking why that novella was allowed to post if my book wasn't. They wrote back, snarkily, and said \"thanks for letting us know about that post. we've deleted that post\" — even though it had been sitting there for 7 months. Great. At least my sense of irony is well-nourished today.<br><br>But then I asked about whether there was a rule against promoting a book for sale. A mod told me that it falls under \"trading\" and trading is not allowed. When I said, \"Wow, that's a stretch, champ,\" the reply I got said I was permanently banned from the subreddit. The reason was that I \"just wouldn't take no for an answer.\"<br><br>You know what they say about Reddit moderators..."
+    },
+    {
+        "id": "musing_02",
+        "date": "2026.02.12",
+        "title": "Website Update",
+        "summary": "Ooo, Shiny!",
+        "body": "With a little help (OK, actually a lot of help) (Hmm, now I sound like SecUnit...) from Google Antigravity, I have reworked my website to be spiffier and, well, better. I'm also using GitHub Pages to host it. I have added this section, where I'll post occasional thoughts or updates. If you find any problems let me know!"
+    },
+    {
         "id": "musing_01",
         "date": "2026.02.08",
         "title": "LET'S TALK ABOUT MURDERBOT",
         "summary": "I am reading the Murderbot Diaries series and loving it. My editor on \"Lucky's Stars\" suggested them because of the first-person narration in both books, and she was so right.",
         "body": "Readers are probably familiar with Martha Wells' Murderbot Diaries (a series with some offshoot stories) already. I think I was late to the party. But I've read everything that's out, and I'm looking forward to the May, 2026 release of the next book. The way Wells gets into the head of a \"construct\" - a mostly synthetic-but-slightly-organic \"security unit\" - is awesome. I think she has talked about (<a href='https://www.youtube.com/watch?v=lZ0wIHRXq0Y' target='_blank' style='color: var(--accent-color); font-weight: bold;'>(Interview)</a>) how the SecUnit seems kind of like some neurodivergent humans. She talked a little about that in the New Scientist interview. I relate to that sometimes, even if I'm fairly neurotypical. <br><br>I was also glad to hear Wells talk about how she develops her characters and stories. She sounds much more like a \"pantser\" than a \"plotter.\" And I wrote \"Lucky's Stars\" as a confirmed pantser - putting the characters in a situation and then letting the story spin out of my head. I think that's great, but for my second book, I'm doing much more plotting, and I think the book will be better for that."
-    },
-    {
-        "id": "musing_02",
-        "date": "2026.02.05",
-        "title": "JOURNALISM_RECONSTRUCTION",
-        "summary": "Revisiting the coyote features for HMB Magazine. It's interesting how the 'borderlands' between urban and wild still mirror the sectors of the Verse I'm writing about now.",
-        "link": "/journalism.html"
-    },
-    {
-        "id": "musing_03",
-        "date": "2026.01.28",
-        "title": "FICTION_PULSE",
-        "summary": "Lucky's Stars is seeing a surge in reader activity. Drafting some preliminary thoughts on 'Lucky's Ghosts'. The narrative arc is tightening.",
-        "link": "/fiction.html"
     }
 ]

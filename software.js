@@ -125,8 +125,8 @@ softwareContent.innerHTML = `
             </div>
             <div class="musing-item" style="padding: 1rem; border-left: 2px solid var(--accent-color); background: rgba(255,255,255,0.03);">
                 <div class="mono-accent" style="color: var(--accent-color); margin-bottom: 0.5rem;">RESOURCE_06</div>
-                <h4 style="margin: 0 0 0.5rem 0; font-family: var(--font-scifi);"><a href="https://regolith.rocks/" target="_blank" style="color: var(--text-primary); text-decoration: none;">Regolith.rocks</a></h4>
-                <p style="font-size: 0.9rem; opacity: 0.8; margin: 0;">Great tools for mining solo or in groups.</p>
+                <h4 style="margin: 0 0 0.5rem 0; font-family: var(--font-scifi);"><a href="https://sc-crafter.com/" target="_blank" style="color: var(--text-primary); text-decoration: none;">SC Crafter</a></h4>
+                <p style="font-size: 0.9rem; opacity: 0.8; margin: 0;">Good site for a lot o info on crafting and related stuff.</p>
             </div>
             <div class="musing-item" style="padding: 1rem; border-left: 2px solid var(--accent-color); background: rgba(255,255,255,0.03);">
                 <div class="mono-accent" style="color: var(--accent-color); margin-bottom: 0.5rem;">RESOURCE_07</div>
