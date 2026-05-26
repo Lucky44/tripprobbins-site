@@ -1,6 +1,16 @@
 # Personal Website - Session Notes
 
+## Session: May 26, 2026
+
+### 1. New Musing Added ("Upcoming Stuff")
+- **Content**: Added the `musing_06` entry announcing the July 1st release of *Lucky's Ghosts* (Book 2), second edition of *Lucky's Stars* with cover art by Alicia Vogel, and upcoming events (Bay Area Book Fair on May 31, Austin Bar Citizen on June 13, and BayCon on July 3-6).
+- **Process**: Drafted the entry in `musing-draft.md` and compiled it into `public/data/musings.json` using the automated `npm run add-musing` script.
+
+### 2. Live Deployment
+- **Action**: Verified the local preview using Vite's development server, successfully built the static assets, and pushed the commit directly to the `main` branch to trigger the GitHub Actions deployment pipeline.
+
 ## Session: March 25, 2026
+
 
 ### 1. Deployment Pipeline Fix (GitHub Actions)
 - **Problem**: Website updates (including a new Musing and app updates) were pushed to the local `master` branch but didn't deploy to the live site.
