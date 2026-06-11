@@ -27,8 +27,8 @@ contactContent.innerHTML = `
           <div class="sci-divider" style="margin: 2rem 0; width: 100%;"></div>
 
           <div style="display: flex; flex-direction: column; align-items: center;">
-            <h2 style="border: none; padding: 0; margin-bottom: 0.5rem;">FIND ME ON DISCORD</h2>
-            <div style="font-family: var(--font-scifi); font-size: 2.2rem; color: var(--text-primary); font-weight: 700; text-transform: none; letter-spacing: 0.05em;">lucky3333</div>
+            <h2 style="border: none; padding: 0; margin: 0 0 0.2rem 0; line-height: 1.1;">FIND ME ON DISCORD</h2>
+            <div style="font-family: var(--font-scifi); font-size: 2.2rem; color: var(--text-primary); font-weight: 700; text-transform: none; letter-spacing: 0.05em; line-height: 1.1;">lucky3333</div>
           </div>
         </div>
       </section>
