@@ -22,10 +22,12 @@ contactContent.innerHTML = `
           </p>
           
           <button id="page-contact-trigger" class="cta-button primary" style="min-width: 300px; cursor: pointer;">INITIALIZE_COMMS</button>
-          <p style="font-size: 0.7rem; opacity: 0.5; margin-top: 1rem; margin-bottom: 2rem;" class="mono-accent">REF: FORM_ENCRYPTION_ACTIVE</p>
+          <p style="font-size: 0.7rem; opacity: 0.5; margin-top: 1rem;" class="mono-accent">REF: FORM_ENCRYPTION_ACTIVE</p>
 
-          <div style="margin-top: 2rem; display: flex; flex-direction: column; align-items: center;">
-            <h2 style="border: none; padding: 0; margin: 0 0 0.5rem 0; font-size: 1.4rem;">FIND ME ON DISCORD</h2>
+          <div class="sci-divider" style="margin: 2rem 0; width: 100%;"></div>
+
+          <div style="display: flex; flex-direction: column; align-items: center;">
+            <h2 style="border: none; padding: 0; margin-bottom: 0.5rem;">FIND ME ON DISCORD</h2>
             <div style="font-family: var(--font-scifi); font-size: 2.2rem; color: var(--text-primary); font-weight: 700; text-transform: none; letter-spacing: 0.05em;">lucky3333</div>
           </div>
         </div>
