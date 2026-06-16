@@ -143,6 +143,11 @@ softwareContent.innerHTML = `
                 <h4 style="margin: 0 0 0.5rem 0; font-family: var(--font-scifi);"><a href="https://sc-cargo.space/" target="_blank" style="color: var(--text-primary); text-decoration: none;">SC-Cargo.space</a></h4>
                 <p style="font-size: 0.9rem; opacity: 0.8; margin: 0;">For the anal-retentive cargo planner!</p>
             </div>
+            <div class="musing-item" style="padding: 1rem; border-left: 2px solid var(--accent-color); background: rgba(255,255,255,0.03);">
+                <div class="mono-accent" style="color: var(--accent-color); margin-bottom: 0.5rem;">RESOURCE_10</div>
+                <h4 style="margin: 0 0 0.5rem 0; font-family: var(--font-scifi);"><a href="https://scmdb.net/" target="_blank" style="color: var(--text-primary); text-decoration: none;">SC Mission Database</a></h4>
+                <p style="font-size: 0.9rem; opacity: 0.8; margin: 0;">all about missions, including blueprints earned.</p>
+            </div>
         </div>
       </div>
       
