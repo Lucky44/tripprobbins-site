@@ -27,15 +27,15 @@ homeContent.innerHTML = `
         <div class="featured-book-container" style="margin-top: 3rem; flex-grow: 1; display: flex; flex-direction: column; align-items: center; text-align: center; gap: 2rem;">
           <div class="book-cover-frame" style="width: 100%; max-width: 214px; position: relative;">
             <div class="corner-brackets small"></div>
-            <img src="assets/luckys-stars-cover.png" alt="Lucky's Stars Cover" style="width: 100%; border-radius: 4px; box-shadow: 0 0 20px rgba(6, 182, 212, 0.3); display: block; image-rendering: -webkit-optimize-contrast;">
+            <img src="assets/luckys-ghost-cover.jpg" alt="Lucky's Ghost Cover" style="width: 100%; border-radius: 4px; box-shadow: 0 0 20px rgba(6, 182, 212, 0.3); display: block; image-rendering: -webkit-optimize-contrast;">
             <div class="header-coords" style="top: -1.5rem; right: 0;">ID: LS01_C_DEN</div>
           </div>
 
           <div class="book-details" style="max-width: 450px;">
             <div class="mono-accent" style="margin-bottom: 1rem;">PROJECT: CITIZENS_&_DENIZENS</div>
-            <h3 class="scifi-font" style="font-size: 1.5rem; color: var(--accent-color); margin-bottom: 1.5rem;">Lucky's Stars</h3>
+            <h3 class="scifi-font" style="font-size: 1.5rem; color: var(--accent-color); margin-bottom: 1.5rem;">Lucky's Ghosts</h3>
             <p style="font-size: 1.1rem; line-height: 1.6; color: var(--text-primary); margin-bottom: 2rem;">
-              <strong>LUCKY'S STARS</strong> is the first book in my science fiction adventure series, <em>Citizens and Denizens</em>. It's available now on Amazon. It was inspired by the computer game Star Citizen, from Cloud Imperium Games.
+              Book 2 of the Citizens and Denizens trilogy is done and awaiting permission from Cloud Imperium Games to be available commercially. The adventure continues as Lucky, Salty and Zero get tangled up with three factions vying for control of a new (and growing) high-level AI, and they're all ready to burn worlds to get it. The crew is faced with impossible choices, and friendships, ethics and their creativity will be tested.
             </p>
             
             <a href="/fiction.html" class="cta-button primary" style="width: 100%; max-width: 300px;">Enter Sector</a>
