@@ -35,7 +35,7 @@ homeContent.innerHTML = `
             <div class="mono-accent" style="margin-bottom: 1rem;">PROJECT: CITIZENS_&_DENIZENS</div>
             <h3 class="scifi-font" style="font-size: 1.5rem; color: var(--accent-color); margin-bottom: 1.5rem;">Lucky's Ghosts</h3>
             <p style="font-size: 1.1rem; line-height: 1.6; color: var(--text-primary); margin-bottom: 2rem;">
-              Book 2 of the Citizens and Denizens trilogy is done and awaiting permission from Cloud Imperium Games to be available commercially. The adventure continues as Lucky, Salty and Zero get tangled up with three factions vying for control of a new (and growing) high-level AI, and they're all ready to burn worlds to get it. The crew is faced with impossible choices, and friendships, ethics and their creativity will be tested.
+              Book 2 of the Citizens and Denizens trilogy is done and awaiting permission from Cloud Imperium Games to be available commercially. The adventure continues as Lucky, Salty and Zero get tangled up with three factions vying for control of a new (and growing) high-level AI, and they're all ready to burn worlds to get it. The crew is faced with impossible choices - friendships, ethics and their creativity will be tested.
             </p>
             
             <a href="/fiction.html" class="cta-button primary" style="width: 100%; max-width: 300px;">Enter Sector</a>
