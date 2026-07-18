@@ -1193,8 +1193,24 @@ h2 {
 /* ---------------------------------------------------------------- */
 /* Line Dances sortable table                                        */
 /* ---------------------------------------------------------------- */
+.ld-search-wrap {
+  max-width: 420px;
+  margin-bottom: 2rem;
+}
+
 .ld-table-wrap {
   overflow-x: auto;
+}
+
+.ld-no-results {
+  text-align: center;
+  padding: 2.5rem 1rem;
+  color: var(--text-secondary);
+  font-family: var(--font-mono);
+  font-size: 0.85rem;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  white-space: normal;
 }
 
 .ld-table {

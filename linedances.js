@@ -24,14 +24,38 @@ const dances = [
 // ---------------------------------------------------------------------
 let sortKey = 'song';
 let sortDir = 1; // 1 = ascending, -1 = descending
+let searchTerm = '';
+
+function escapeHtml(str) {
+  const div = document.createElement('div');
+  div.textContent = str;
+  return div.innerHTML;
+}
 
 function linkCell(url, label) {
   if (!url) return '<span class="ld-empty">&mdash;</span>';
   return `<a href="${url}" target="_blank" rel="noopener noreferrer" class="ld-link">${label}</a>`;
 }
 
+function matchesSearch(d, term) {
+  if (!term) return true;
+  return (
+    d.song.toLowerCase().includes(term) ||
+    d.dance.toLowerCase().includes(term) ||
+    d.level.toLowerCase().includes(term)
+  );
+}
+
 function renderRows() {
-  const sorted = [...dances].sort((a, b) => {
+  const term = searchTerm.trim().toLowerCase();
+
+  const filtered = dances.filter(d => matchesSearch(d, term));
+
+  if (filtered.length === 0) {
+    return `<tr><td colspan="5" class="ld-no-results">No dances match "${escapeHtml(searchTerm)}".</td></tr>`;
+  }
+
+  const sorted = filtered.sort((a, b) => {
     const av = a[sortKey].toLowerCase();
     const bv = b[sortKey].toLowerCase();
     if (av < bv) return -1 * sortDir;
@@ -78,9 +102,16 @@ content.innerHTML = `
     <div class="bottom-corners"></div>
     <div class="mono-accent" style="margin-bottom: 2rem;">INTEL_ENTRY: LINE_DANCE_ARCHIVE</div>
 
-    <h2 style="border-left: 4px solid var(--accent-color); padding-left: 1.5rem; margin: 0 0 2.5rem; font-size: 2.5rem; line-height: 1.1; letter-spacing: 0.05em; text-transform: uppercase;">
+    <h2 style="border-left: 4px solid var(--accent-color); padding-left: 1.5rem; margin: 0 0 2rem; font-size: 2.5rem; line-height: 1.1; letter-spacing: 0.05em; text-transform: uppercase;">
       Line Dances
     </h2>
+
+    <div class="ld-search-wrap">
+      <div class="hud-input-wrapper">
+        <div class="mono-accent">SEARCH:</div>
+        <input type="text" id="ld-search" class="hud-input" placeholder="FILTER BY SONG, DANCE, OR LEVEL..." autocomplete="off">
+      </div>
+    </div>
 
     <div class="ld-table-wrap">
       <table class="ld-table">
@@ -113,6 +144,11 @@ document.querySelectorAll('.ld-table th[data-sort-key]').forEach(th => {
     }
     renderTableBody();
   });
+});
+
+document.getElementById('ld-search')?.addEventListener('input', (e) => {
+  searchTerm = e.target.value;
+  renderTableBody();
 });
 
 initFooter();
