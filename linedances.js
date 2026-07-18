@@ -8,14 +8,15 @@ initCommonUI();
 // Edit this array to add/update/remove line dances. Each row needs:
 //   song      - song title (string)
 //   dance     - dance title (string)
+//   level     - short level abbreviation, e.g. 'Beg', 'Imp', 'Int', 'Adv' (string)
 //   tutorial  - URL to a tutorial video (string, or '' if none yet)
 //   demo      - URL to a demo video (string, or '' if none yet)
 // ---------------------------------------------------------------------
 const dances = [
-  { song: 'Copperhead Road', dance: 'Copperhead Road', tutorial: 'https://www.youtube.com/watch?v=example1', demo: 'https://www.youtube.com/watch?v=example2' },
-  { song: 'Watermelon Crawl', dance: 'Watermelon Crawl', tutorial: 'https://www.youtube.com/watch?v=example3', demo: '' },
-  { song: 'Boot Scootin\' Boogie', dance: 'Boot Scootin\' Boogie', tutorial: '', demo: 'https://www.youtube.com/watch?v=example4' },
-  { song: 'Cotton Eye Joe', dance: 'Cotton Eye Joe', tutorial: '', demo: '' },
+  { song: 'Copperhead Road', dance: 'Copperhead Road', level: 'Int', tutorial: 'https://www.youtube.com/watch?v=example1', demo: 'https://www.youtube.com/watch?v=example2' },
+  { song: 'Watermelon Crawl', dance: 'Watermelon Crawl', level: 'Beg', tutorial: 'https://www.youtube.com/watch?v=example3', demo: '' },
+  { song: 'Boot Scootin\' Boogie', dance: 'Boot Scootin\' Boogie', level: 'Imp', tutorial: '', demo: 'https://www.youtube.com/watch?v=example4' },
+  { song: 'Cotton Eye Joe', dance: 'Cotton Eye Joe', level: 'Beg', tutorial: '', demo: '' },
 ];
 
 // ---------------------------------------------------------------------
@@ -42,6 +43,7 @@ function renderRows() {
     <tr>
       <td>${d.song}</td>
       <td>${d.dance}</td>
+      <td class="ld-col-lvl">${d.level}</td>
       <td>${linkCell(d.demo, 'Demo')}</td>
       <td>${linkCell(d.tutorial, 'Tutorial')}</td>
     </tr>
@@ -86,6 +88,7 @@ content.innerHTML = `
           <tr>
             <th data-sort-key="song">Song Title</th>
             <th data-sort-key="dance">Dance Title</th>
+            <th class="ld-col-lvl">LVL</th>
             <th>Dance Demos</th>
             <th>Tutorials</th>
           </tr>

@@ -1211,6 +1211,14 @@ h2 {
   white-space: nowrap;
 }
 
+.ld-table th.ld-col-lvl,
+.ld-table td.ld-col-lvl {
+  width: 1%;
+  padding-left: 0.75rem;
+  padding-right: 0.75rem;
+  text-align: center;
+}
+
 .ld-table thead th {
   font-family: var(--font-mono);
   font-size: 1.1rem;
