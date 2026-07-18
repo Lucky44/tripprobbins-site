@@ -1214,6 +1214,7 @@ h2 {
 .ld-table th.ld-col-lvl,
 .ld-table td.ld-col-lvl {
   width: 1%;
+  min-width: 5.5ch;
   padding-left: 0.75rem;
   padding-right: 0.75rem;
   text-align: center;

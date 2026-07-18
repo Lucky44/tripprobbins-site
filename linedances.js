@@ -15,7 +15,7 @@ initCommonUI();
 const dances = [
   { song: 'Copperhead Road', dance: 'Copperhead Road', level: 'Int', tutorial: 'https://www.youtube.com/watch?v=example1', demo: 'https://www.youtube.com/watch?v=example2' },
   { song: 'Watermelon Crawl', dance: 'Watermelon Crawl', level: 'Beg', tutorial: 'https://www.youtube.com/watch?v=example3', demo: '' },
-  { song: 'Boot Scootin\' Boogie', dance: 'Boot Scootin\' Boogie', level: 'Imp', tutorial: '', demo: 'https://www.youtube.com/watch?v=example4' },
+  { song: 'Boot Scootin\' Boogie', dance: 'Boot Scootin\' Boogie', level: 'H Imp', tutorial: '', demo: 'https://www.youtube.com/watch?v=example4' },
   { song: 'Cotton Eye Joe', dance: 'Cotton Eye Joe', level: 'Beg', tutorial: '', demo: '' },
 ];
 
@@ -88,7 +88,7 @@ content.innerHTML = `
           <tr>
             <th data-sort-key="song">Song Title</th>
             <th data-sort-key="dance">Dance Title</th>
-            <th class="ld-col-lvl">LVL</th>
+            <th data-sort-key="level" class="ld-col-lvl">LVL</th>
             <th>Dance Demos</th>
             <th>Tutorials</th>
           </tr>
