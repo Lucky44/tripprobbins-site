@@ -42,8 +42,8 @@ function renderRows() {
     <tr>
       <td>${d.song}</td>
       <td>${d.dance}</td>
-      <td>${linkCell(d.tutorial, 'Tutorial')}</td>
       <td>${linkCell(d.demo, 'Demo')}</td>
+      <td>${linkCell(d.tutorial, 'Tutorial')}</td>
     </tr>
   `).join('');
 }
@@ -86,8 +86,8 @@ content.innerHTML = `
           <tr>
             <th data-sort-key="song">Song Title</th>
             <th data-sort-key="dance">Dance Title</th>
-            <th>Tutorial</th>
-            <th>Demo</th>
+            <th>Dance Demos</th>
+            <th>Tutorials</th>
           </tr>
         </thead>
         <tbody id="ld-tbody"></tbody>

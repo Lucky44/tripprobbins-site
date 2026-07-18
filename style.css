@@ -1213,11 +1213,11 @@ h2 {
 
 .ld-table thead th {
   font-family: var(--font-mono);
-  font-size: 0.75rem;
+  font-size: 1.1rem;
   text-transform: uppercase;
   letter-spacing: 0.15em;
-  color: var(--accent-color);
-  opacity: 0.85;
+  color: #d4af37;
+  opacity: 1;
   position: relative;
   user-select: none;
 }
@@ -1230,7 +1230,7 @@ h2 {
 
 .ld-table th[data-sort-key]:hover {
   opacity: 1;
-  text-shadow: 0 0 8px var(--accent-glow);
+  text-shadow: 0 0 8px rgba(212, 175, 55, 0.5);
 }
 
 .ld-table th[data-sort-key]::after {
