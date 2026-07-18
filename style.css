@@ -1189,3 +1189,99 @@ h2 {
     transform-origin: top;
   }
 }
+
+/* ---------------------------------------------------------------- */
+/* Line Dances sortable table                                        */
+/* ---------------------------------------------------------------- */
+.ld-table-wrap {
+  overflow-x: auto;
+}
+
+.ld-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-family: var(--font-body);
+}
+
+.ld-table th,
+.ld-table td {
+  text-align: left;
+  padding: 1rem 1.25rem;
+  border-bottom: 1px solid var(--border-color);
+  white-space: nowrap;
+}
+
+.ld-table thead th {
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 0.15em;
+  color: var(--accent-color);
+  opacity: 0.85;
+  position: relative;
+  user-select: none;
+}
+
+.ld-table th[data-sort-key] {
+  cursor: pointer;
+  transition: opacity 0.2s ease;
+  padding-right: 1.75rem;
+}
+
+.ld-table th[data-sort-key]:hover {
+  opacity: 1;
+  text-shadow: 0 0 8px var(--accent-glow);
+}
+
+.ld-table th[data-sort-key]::after {
+  content: '\2195';
+  position: absolute;
+  right: 0.5rem;
+  opacity: 0.35;
+  font-size: 0.8em;
+}
+
+.ld-table th.sorted-asc::after {
+  content: '\2191';
+  opacity: 1;
+}
+
+.ld-table th.sorted-desc::after {
+  content: '\2193';
+  opacity: 1;
+}
+
+.ld-table tbody tr {
+  transition: background 0.2s ease;
+}
+
+.ld-table tbody tr:hover {
+  background: rgba(6, 182, 212, 0.06);
+}
+
+.ld-table tbody td {
+  color: var(--text-primary);
+  font-size: 0.95rem;
+}
+
+.ld-link {
+  color: var(--accent-color);
+  text-decoration: none;
+  font-family: var(--font-mono);
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  border-bottom: 1px solid transparent;
+  transition: all 0.2s ease;
+}
+
+.ld-link:hover {
+  color: #fff;
+  border-bottom-color: var(--accent-color);
+  text-shadow: 0 0 8px var(--accent-glow);
+}
+
+.ld-empty {
+  color: var(--text-secondary);
+  opacity: 0.4;
+}

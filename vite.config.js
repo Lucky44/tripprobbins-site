@@ -11,6 +11,7 @@ export default defineConfig({
                 journalism: 'journalism.html',
                 software: 'software.html',
                 makecontact: 'makecontact.html',
+                linedances: 'linedances.html',
             },
         },
     },
