@@ -1208,6 +1208,20 @@ h2 {
   margin-bottom: 2rem;
 }
 
+.ld-search-wrap .mono-accent {
+  color: #fff;
+  opacity: 0.9;
+}
+
+.ld-search-wrap .hud-input {
+  color: #fff;
+}
+
+.ld-search-wrap .hud-input::placeholder {
+  color: #fff;
+  opacity: 1;
+}
+
 .ld-table-wrap {
   overflow: visible;
 }

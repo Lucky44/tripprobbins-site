@@ -3,6 +3,12 @@ import { initCommonUI, initFooter } from './shared.js'
 
 initCommonUI();
 
+// This page has no site-wide nav menu. initCommonUI() adds it
+// unconditionally (background layers, nav, modal, etc. all come as a
+// bundle), so just remove the nav bar it created and reclaim the space
+// that was reserved for it.
+document.querySelector('.sticky-nav')?.remove();
+
 // ---------------------------------------------------------------------
 // DATA
 // Edit this array to add/update/remove line dances. Each row needs:
@@ -183,7 +189,6 @@ content.innerHTML = `
 
     <div class="ld-sticky-header" id="ld-sticky-header">
       <div class="header-coords">LAT: 0x2C19 LONG: 0x88F4</div>
-      <div class="mono-accent" style="margin-bottom: 2rem;">INTEL_ENTRY: LINE_DANCE_ARCHIVE</div>
 
       <h2 style="border-left: 4px solid var(--accent-color); padding-left: 1.5rem; margin: 0 0 2rem; font-size: 2.5rem; line-height: 1.1; letter-spacing: 0.05em; text-transform: uppercase;">
         Line Dances
@@ -213,6 +218,9 @@ content.innerHTML = `
     </div>
   </section>
 `;
+// The 100px top padding on #app > main (set globally in style.css) exists
+// to clear the fixed nav bar. This page has no nav, so reclaim that space.
+content.style.paddingTop = '2.5rem';
 app.appendChild(content);
 
 renderTableBody();
