@@ -109,7 +109,7 @@ const dances = [
 // ---------------------------------------------------------------------
 // STATE + RENDER
 // ---------------------------------------------------------------------
-let sortKey = 'song';
+let sortKey = 'dance';
 let sortDir = 1; // 1 = ascending, -1 = descending
 let searchTerm = '';
 
@@ -159,8 +159,8 @@ function renderRows() {
 
   return sorted.map(d => `
     <tr>
-      <td>${d.song}</td>
       <td>${d.dance}</td>
+      <td>${d.song}</td>
       <td class="ld-col-lvl">${d.level}</td>
       <td>${linksCell(d.demo, d.tutorial)}</td>
     </tr>
@@ -203,7 +203,7 @@ content.innerHTML = `
       <div class="ld-search-wrap">
         <div class="hud-input-wrapper">
           <div class="mono-accent">SEARCH:</div>
-          <input type="text" id="ld-search" class="hud-input" placeholder="FILTER BY SONG, DANCE, OR LEVEL..." autocomplete="off">
+          <input type="text" id="ld-search" class="hud-input" placeholder="Filter by song, dance, or level..." autocomplete="off">
         </div>
       </div>
     </div>
@@ -212,8 +212,8 @@ content.innerHTML = `
       <table class="ld-table">
         <thead>
           <tr>
-            <th data-sort-key="song">Song Title</th>
             <th data-sort-key="dance">Dance Title</th>
+            <th data-sort-key="song">Song Title</th>
             <th data-sort-key="level" class="ld-col-lvl">LVL</th>
             <th>Links</th>
           </tr>
