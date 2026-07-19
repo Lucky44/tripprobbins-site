@@ -15,7 +15,7 @@ initCommonUI();
 const dances = [
   { song: "3 Tequilla Floor", dance: "3 Tequilla Floor", level: "Int", tutorial: "https://www.youtube.com/watch?v=m_0tZkxwiwA", demo: "https://youtu.be/RR7cP7-xAP4?si=L5fNUjbpZxRLjOMe" },
   { song: "3 To Tango", dance: "3 to Tango", level: "Int", tutorial: "https://www.youtube.com/watch?v=mNcFWHH2IyY", demo: "https://youtu.be/18MW-GqGXJ8?si=qulNgFnodXUrHxHx" },
-  { song: "Tipsy", dance: "A Bar Song", level: "Beg", tutorial: "https://youtu.be/CLkqWNXJNQM?si=cy0GpfkP2vJ0FwoO", demo: "https://www.youtube.com/watch?v=m_0tZkxwiwA" },
+  { song: "Tipsy", dance: "A Bar Song", level: "Beg", tutorial: "https://www.youtube.com/watch?v=CLkqWNXJNQM", demo: "https://www.youtube.com/watch?v=C8syXIES6Yg" },
   { song: "Can't Keep Up", dance: "Alligator Smile", level: "Beg", tutorial: "https://www.youtube.com/watch?v=to72YYlEcAQ&pp=0gcJCZkLAYcqIYzv", demo: "https://www.youtube.com/watch?v=LkZfZKLZSQk" },
   { song: "American Kids", dance: "American Kids", level: "Int", tutorial: "https://www.youtube.com/watch?v=ipGQrVhOXGA", demo: "https://www.youtube.com/watch?v=gscYyXoQDWM" },
   { song: "Angelina", dance: "Angelina", level: "Imp", tutorial: "https://www.youtube.com/watch?v=C2apVmgXQGk&pp=ygUTTGluZSBEYW5jZSBBbmdlbGluYQ%3D%3D", demo: "https://www.youtube.com/watch?v=kqEhgq2GZZs" },
