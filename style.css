@@ -1230,9 +1230,9 @@ h2 {
 .ld-table th.ld-col-lvl,
 .ld-table td.ld-col-lvl {
   width: 1%;
-  min-width: 5.5ch;
+  min-width: 8ch;
   padding-left: 0.75rem;
-  padding-right: 0.75rem;
+  padding-right: 2.5rem;
   text-align: center;
 }
 
@@ -1251,6 +1251,10 @@ h2 {
   cursor: pointer;
   transition: opacity 0.2s ease;
   padding-right: 1.75rem;
+}
+
+.ld-table th[data-sort-key].ld-col-lvl {
+  padding-right: 3rem;
 }
 
 .ld-table th[data-sort-key]:hover {
