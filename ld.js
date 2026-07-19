@@ -159,8 +159,8 @@ function renderRows() {
 
   return sorted.map(d => `
     <tr>
-      <td>${d.dance}</td>
-      <td>${d.song}</td>
+      <td class="ld-col-title" title="${escapeHtml(d.dance)}">${d.dance}</td>
+      <td class="ld-col-title" title="${escapeHtml(d.song)}">${d.song}</td>
       <td class="ld-col-lvl">${d.level}</td>
       <td>${linksCell(d.demo, d.tutorial)}</td>
     </tr>
@@ -212,8 +212,8 @@ content.innerHTML = `
       <table class="ld-table">
         <thead>
           <tr>
-            <th data-sort-key="dance">Dance Title</th>
-            <th data-sort-key="song">Song Title</th>
+            <th data-sort-key="dance" class="ld-col-title">Dance Title</th>
+            <th data-sort-key="song" class="ld-col-title">Song Title</th>
             <th data-sort-key="level" class="ld-col-lvl">LVL</th>
             <th>Links</th>
           </tr>

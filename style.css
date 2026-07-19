@@ -1209,8 +1209,9 @@ h2 {
 }
 
 .ld-search-wrap .mono-accent {
-  color: #fff;
-  opacity: 0.9;
+  color: #d4af37;
+  opacity: 1;
+  font-size: 1.4rem;
 }
 
 .ld-search-wrap .hud-input {
@@ -1220,6 +1221,8 @@ h2 {
 .ld-search-wrap .hud-input::placeholder {
   color: #fff;
   opacity: 1;
+  font-size: 0.65rem;
+  text-transform: none;
 }
 
 .ld-table-wrap {
@@ -1270,6 +1273,13 @@ h2 {
   padding-left: 0.75rem;
   padding-right: 2.5rem;
   text-align: center;
+}
+
+.ld-table th.ld-col-title,
+.ld-table td.ld-col-title {
+  max-width: 200px;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
 .ld-table thead th {
