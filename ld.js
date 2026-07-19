@@ -119,9 +119,16 @@ function escapeHtml(str) {
   return div.innerHTML;
 }
 
-function linkCell(url, label) {
-  if (!url) return '<span class="ld-empty">&mdash;</span>';
+function linkAnchor(url, label) {
+  if (!url) return '';
   return `<a href="${url}" target="_blank" rel="noopener noreferrer" class="ld-link">${label}</a>`;
+}
+
+function linksCell(demo, tutorial) {
+  const demoLink = linkAnchor(demo, 'Demo');
+  const tutorialLink = linkAnchor(tutorial, 'Tutorial');
+  if (!demoLink && !tutorialLink) return '<span class="ld-empty">&mdash;</span>';
+  return `<div class="ld-links-cell">${demoLink}${tutorialLink}</div>`;
 }
 
 function matchesSearch(d, term) {
@@ -139,7 +146,7 @@ function renderRows() {
   const filtered = dances.filter(d => matchesSearch(d, term));
 
   if (filtered.length === 0) {
-    return `<tr><td colspan="5" class="ld-no-results">No dances match "${escapeHtml(searchTerm)}".</td></tr>`;
+    return `<tr><td colspan="4" class="ld-no-results">No dances match "${escapeHtml(searchTerm)}".</td></tr>`;
   }
 
   const sorted = filtered.sort((a, b) => {
@@ -155,8 +162,7 @@ function renderRows() {
       <td>${d.song}</td>
       <td>${d.dance}</td>
       <td class="ld-col-lvl">${d.level}</td>
-      <td>${linkCell(d.demo, 'Demo')}</td>
-      <td>${linkCell(d.tutorial, 'Tutorial')}</td>
+      <td>${linksCell(d.demo, d.tutorial)}</td>
     </tr>
   `).join('');
 }
@@ -209,8 +215,7 @@ content.innerHTML = `
             <th data-sort-key="song">Song Title</th>
             <th data-sort-key="dance">Dance Title</th>
             <th data-sort-key="level" class="ld-col-lvl">LVL</th>
-            <th>Dance Demos</th>
-            <th>Tutorials</th>
+            <th>Links</th>
           </tr>
         </thead>
         <tbody id="ld-tbody"></tbody>

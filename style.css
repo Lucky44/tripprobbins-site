@@ -1353,3 +1353,9 @@ h2 {
   color: var(--text-secondary);
   opacity: 0.4;
 }
+
+.ld-links-cell {
+  display: inline-flex;
+  gap: 1.25rem;
+  align-items: center;
+}
