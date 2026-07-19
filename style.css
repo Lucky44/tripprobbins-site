@@ -1209,7 +1209,19 @@ h2 {
 }
 
 .ld-table-wrap {
-  overflow-x: auto;
+  overflow: visible;
+}
+
+/* Below this width, sticky headers take a back seat to being able to
+   horizontally scroll the table so long titles aren't cut off. */
+@media (max-width: 700px) {
+  .ld-table-wrap {
+    overflow-x: auto;
+  }
+
+  .ld-table thead th {
+    position: static;
+  }
 }
 
 .ld-no-results {

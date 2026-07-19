@@ -217,6 +217,20 @@ app.appendChild(content);
 
 renderTableBody();
 
+// The panel uses "overflow: hidden" to clip its one-time entrance-sweep
+// animation and keep the corner brackets crisp. But an ancestor with
+// overflow other than "visible" hijacks position:sticky (the sticky
+// element sticks relative to that ancestor instead of the viewport).
+// Once the entrance animation finishes, switch it to visible so the
+// sticky title/search/table-header behave correctly for the rest of
+// the scroll session.
+const panel = document.getElementById('linedances');
+if (panel) {
+  setTimeout(() => {
+    panel.style.overflow = 'visible';
+  }, 1800);
+}
+
 // ---------------------------------------------------------------------
 // STICKY HEADER OFFSETS
 // The title/search block sticks below the fixed top nav, and the table's
