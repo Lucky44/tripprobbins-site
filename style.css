@@ -1193,6 +1193,16 @@ h2 {
 /* ---------------------------------------------------------------- */
 /* Line Dances sortable table                                        */
 /* ---------------------------------------------------------------- */
+.ld-sticky-header {
+  position: sticky;
+  top: var(--ld-nav-h, 100px);
+  z-index: 60;
+  background: rgba(15, 23, 42, 0.94);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  padding-top: 1px;
+}
+
 .ld-search-wrap {
   max-width: 420px;
   margin-bottom: 2rem;
@@ -1243,7 +1253,10 @@ h2 {
   letter-spacing: 0.15em;
   color: #d4af37;
   opacity: 1;
-  position: relative;
+  position: sticky;
+  top: var(--ld-thead-top, 160px);
+  z-index: 55;
+  background: rgba(15, 23, 42, 0.96);
   user-select: none;
 }
 

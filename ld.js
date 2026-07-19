@@ -179,18 +179,21 @@ const content = document.createElement('main');
 content.className = 'container';
 content.innerHTML = `
   <section id="linedances" class="glass-panel corner-brackets animate-in" style="animation-delay: 0.2s;">
-    <div class="header-coords">LAT: 0x2C19 LONG: 0x88F4</div>
     <div class="bottom-corners"></div>
-    <div class="mono-accent" style="margin-bottom: 2rem;">INTEL_ENTRY: LINE_DANCE_ARCHIVE</div>
 
-    <h2 style="border-left: 4px solid var(--accent-color); padding-left: 1.5rem; margin: 0 0 2rem; font-size: 2.5rem; line-height: 1.1; letter-spacing: 0.05em; text-transform: uppercase;">
-      Line Dances
-    </h2>
+    <div class="ld-sticky-header" id="ld-sticky-header">
+      <div class="header-coords">LAT: 0x2C19 LONG: 0x88F4</div>
+      <div class="mono-accent" style="margin-bottom: 2rem;">INTEL_ENTRY: LINE_DANCE_ARCHIVE</div>
 
-    <div class="ld-search-wrap">
-      <div class="hud-input-wrapper">
-        <div class="mono-accent">SEARCH:</div>
-        <input type="text" id="ld-search" class="hud-input" placeholder="FILTER BY SONG, DANCE, OR LEVEL..." autocomplete="off">
+      <h2 style="border-left: 4px solid var(--accent-color); padding-left: 1.5rem; margin: 0 0 2rem; font-size: 2.5rem; line-height: 1.1; letter-spacing: 0.05em; text-transform: uppercase;">
+        Line Dances
+      </h2>
+
+      <div class="ld-search-wrap">
+        <div class="hud-input-wrapper">
+          <div class="mono-accent">SEARCH:</div>
+          <input type="text" id="ld-search" class="hud-input" placeholder="FILTER BY SONG, DANCE, OR LEVEL..." autocomplete="off">
+        </div>
       </div>
     </div>
 
@@ -213,6 +216,31 @@ content.innerHTML = `
 app.appendChild(content);
 
 renderTableBody();
+
+// ---------------------------------------------------------------------
+// STICKY HEADER OFFSETS
+// The title/search block sticks below the fixed top nav, and the table's
+// header row sticks below that block. Offsets are measured at runtime so
+// this keeps working if the nav or header block ever changes height.
+// ---------------------------------------------------------------------
+function updateStickyOffsets() {
+  const nav = document.querySelector('.sticky-nav');
+  const stickyHeader = document.getElementById('ld-sticky-header');
+  if (!stickyHeader) return;
+
+  const navHeight = nav ? nav.offsetHeight : 0;
+  document.documentElement.style.setProperty('--ld-nav-h', `${navHeight}px`);
+
+  const theadTop = navHeight + stickyHeader.offsetHeight;
+  document.documentElement.style.setProperty('--ld-thead-top', `${theadTop}px`);
+}
+
+updateStickyOffsets();
+window.addEventListener('load', updateStickyOffsets);
+window.addEventListener('resize', () => {
+  clearTimeout(window._ldResizeTimer);
+  window._ldResizeTimer = setTimeout(updateStickyOffsets, 150);
+});
 
 document.querySelectorAll('.ld-table th[data-sort-key]').forEach(th => {
   th.addEventListener('click', () => {
