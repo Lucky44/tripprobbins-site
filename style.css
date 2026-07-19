@@ -1256,6 +1256,7 @@ h2 {
   width: 100%;
   border-collapse: collapse;
   font-family: var(--font-body);
+  table-layout: fixed;
 }
 
 .ld-table th,
@@ -1268,15 +1269,15 @@ h2 {
 
 .ld-table th.ld-col-lvl,
 .ld-table td.ld-col-lvl {
-  width: 1%;
-  min-width: 8ch;
+  width: 90px;
   padding-left: 0.75rem;
-  padding-right: 2.5rem;
+  padding-right: 1rem;
   text-align: center;
 }
 
 .ld-table th.ld-col-title,
 .ld-table td.ld-col-title {
+  width: 200px;
   max-width: 200px;
   overflow: hidden;
   text-overflow: ellipsis;
@@ -1303,7 +1304,7 @@ h2 {
 }
 
 .ld-table th[data-sort-key].ld-col-lvl {
-  padding-right: 3rem;
+  padding-right: 1.75rem;
 }
 
 .ld-table th[data-sort-key]:hover {
