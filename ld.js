@@ -59,7 +59,7 @@ const dances = [
   { song: "If Jesus Loves Me", dance: "Groovy Love", level: "Int", tutorial: "https://www.youtube.com/watch?v=rMsrWKfKFUU", demo: "https://www.youtube.com/watch?v=wQV46VZrVwI" },
   { song: "Half Moon Bay", dance: "Half Moon Bay", level: "H Beg", tutorial: "", demo: "https://www.youtube.com/watch?v=W2bh1zVMbT4" },
   { song: "Cowboy Up", dance: "Heel Toe Rodeo", level: "Imp", tutorial: "https://www.youtube.com/watch?v=eZNtZHKa9E0", demo: "https://www.youtube.com/watch?v=kP2lL9Ho_TM" },
-  { song: "Hicktown", dance: "Hicktown", level: "Beg", tutorial: "", demo: "https://www.instagram.com/p/DGeyjDUxP6K/" },
+  { song: "Hicktown", dance: "Hicktown", level: "Beg", tutorial: "https://youtu.be/itokZwKRM-k?si=FRrEfZaSC1rkEnn7&t=12", demo: "https://www.instagram.com/p/DGeyjDUxP6K/" },
   { song: "Hoedown", dance: "Hoedown", level: "Beg", tutorial: "https://www.youtube.com/watch?v=2jd53zoiKkw", demo: "https://www.youtube.com/watch?v=k4GQfqtAu5k" },
   { song: "I See Country", dance: "Honky Tonk Way", level: "Int", tutorial: "https://youtu.be/KMItGKCWkH4?si=Xz7WsGgfz_U2pteJ", demo: "https://www.youtube.com/watch?v=Ie3H31bWzlU" },
   { song: "House Party", dance: "House Party", level: "Beg", tutorial: "https://www.youtube.com/watch?v=PGVLdkDmLyM", demo: "https://www.youtube.com/watch?v=_bmRf2o42bo" },
