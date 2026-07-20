@@ -62,6 +62,7 @@ const dances = [
   { song: "Hicktown", dance: "Hicktown", level: "Beg", tutorial: "", demo: "https://www.instagram.com/p/DGeyjDUxP6K/" },
   { song: "Hoedown", dance: "Hoedown", level: "Beg", tutorial: "https://www.youtube.com/watch?v=2jd53zoiKkw", demo: "https://www.youtube.com/watch?v=k4GQfqtAu5k" },
   { song: "I See Country", dance: "Honky Tonk Way", level: "Int", tutorial: "https://youtu.be/KMItGKCWkH4?si=Xz7WsGgfz_U2pteJ", demo: "https://www.youtube.com/watch?v=Ie3H31bWzlU" },
+  { song: "House Party", dance: "House Party", level: "Beg", tutorial: "https://www.youtube.com/watch?v=PGVLdkDmLyM", demo: "https://www.youtube.com/watch?v=_bmRf2o42bo" },
   { song: "Be Her", dance: "Hurts So Bad", level: "Imp", tutorial: "https://www.youtube.com/watch?v=GJoSc6DBxnA", demo: "https://www.youtube.com/watch?v=Xs3QFvFdYzU" },
   { song: "I Was on a Boat That Day", dance: "I Was on a Boat", level: "Beg", tutorial: "https://www.youtube.com/watch?v=LzoBPO3knp4", demo: "https://www.youtube.com/watch?v=ltAHZF0wQoc" },
   { song: "Infectious", dance: "Infectious", level: "H Int", tutorial: "https://youtu.be/Rzyp2iFXEag?si=Bq78RYq9kTKL4RCQ", demo: "https://youtu.be/NlQdEeE7iFI?si=aDT6xMA4K1vcf3UN" },
