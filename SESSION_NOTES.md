@@ -1,5 +1,36 @@
 # Personal Website - Session Notes
 
+## Session: July 30, 2026
+
+### 1. Home Page: "What's Current" Announcement
+- **Copy**: Opening sentence now reads "Book 2 of the Citizens and Denizens trilogy is now available on Amazon!" The rest of the synopsis moved into its own paragraph below.
+- **New Amazon link**: Added a HUD-styled acquisition block (`.amazon-link` in `style.css`) linking to `https://a.co/d/0ftshYQL` — cyan border, gradient fill, mono `ACQUIRE // AMZN_LINK` label above the title, fills solid on hover to match the existing `.glass-link` interaction language.
+- **Caption fix**: The `REF:` line under "Enter Sector" said `AMZN_INTEL_LINK` but the button points at the fiction page. Now `FICTION_INTEL_LINK`.
+
+### 2. New Cover Art
+- **Asset**: Replaced the cover with the version carrying the HUMAN AUTHORED badge, web-sized to 600×906 (512KB, down from 1.2MB).
+- **Naming**: Saved as `luckys-ghosts-cover-v2.jpg` rather than overwriting `luckys-ghost-cover.jpg`, so the CDN and returning visitors can't serve the cached badge-less image. Old asset deleted.
+
+### 3. Fiction Page Overhaul
+- **Removed**: The three "Sneak Peek" draft chapter links, the modal reader system behind them (`loadChapters`, `openReader`, prev/next nav), and `public/data/chapters.json`. Book 2 is published, so draft chapters are obsolete. `fiction.js` went from 119 lines to ~40; built bundle from 4.0kB to 1.4kB.
+- **Added**: A `DATABASE_ENTRY: LUCKY'S GHOSTS` section mirroring the Book 1 card — same cover frame, headline "Lucky's Ghosts: (Book 2)", new synopsis, and an "Available on Amazon" button.
+- **Layout fix**: `.book-card-visual` used `flex: 0 0 188px`, but flex-basis governs *height* once the layout stacks below 1012px, so the frame sized itself to each image's natural width (Stars 242px, Ghosts 602px). Changed to `flex: 0 0 auto; width: 188px`. Both cards now render 190×270 at every breakpoint. This also fixed a pre-existing bug on the Book 1 card.
+
+### 4. Deploy Pipeline Fix
+- **Problem**: `.github/workflows/deploy.yml` had `url: \${{ steps.deployment.outputs.page_url }}` — the backslash escaped the expression, so GitHub logged the literal `\http://tripprobbins.com/` and refused to render it as a link in the workflow graph.
+- **Fix**: Removed the backslash. Annotation is gone.
+
+### 5. Commits (all deployed to `main`)
+- `e9d3c2b` — Amazon announcement + new cover art
+- `1b411f8` — `FICTION_INTEL_LINK` caption
+- `2f80d56` — Workflow environment URL
+- `e645033` — Fiction page: chapters out, Ghosts entry in
+
+### 6. Known Loose Ends
+- **`dist/` is gitignored but still tracked** — committed before the ignore rule, so it dirties `git status` after every build. Production is unaffected (Actions builds fresh from source). `git rm -r --cached dist` would settle it.
+- **`extract_chapters.py` / `extracted_text.txt`** remain in the repo root. The script is obsolete (points outside the repo); the .txt holds Chapter 2–3 draft prose.
+- **Cover originals**: The two working copies in the repo root were deleted. The only remaining copy of the web-sized cover is `public/assets/luckys-ghosts-cover-v2.jpg` — keep the full-resolution original backed up elsewhere.
+
 ## Session: May 26, 2026
 
 ### 1. New Musing Added ("Upcoming Stuff")
