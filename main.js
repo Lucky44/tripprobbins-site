@@ -48,7 +48,7 @@ homeContent.innerHTML = `
             </p>
 
             <a href="/fiction.html" class="cta-button primary" style="width: 100%; max-width: 300px;">Enter Sector</a>
-            <p style="font-size: 0.7rem; margin-top: 1rem; opacity: 0.5;" class="mono-accent">REF: AMZN_INTEL_LINK</p>
+            <p style="font-size: 0.7rem; margin-top: 1rem; opacity: 0.5;" class="mono-accent">REF: FICTION_INTEL_LINK</p>
           </div>
         </div>
       </section>
