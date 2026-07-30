@@ -56,6 +56,7 @@ const dances = [
   { song: "Fishin in the Dark", dance: "Fishin in the Dark", level: "E Imp", tutorial: "https://youtu.be/_twN0QvnTTo?si=_JQBhQcMIo_WycBQ", demo: "https://www.instagram.com/reels/DGnwCqyp0GQ/" },
   { song: "Fool", dance: "Fool 4 You", level: "Imp", tutorial: "https://www.youtube.com/watch?v=rxyee-LLQG4", demo: "https://www.youtube.com/watch?v=czCN1KJ4opI" },
   { song: "Footloose", dance: "Footloose", level: "H Beg", tutorial: "https://youtu.be/6BPpvjlpQxc?si=FTuElBRiAp0QY3i4&t=62", demo: "https://youtu.be/dvjCzCFjmGo?si=qokkUfveCzve7gd5&t=15" },
+  { song: "Freight Train", dance: "Freight Train", level: "H Beg", tutorial: "https://www.youtube.com/watch?v=TF5TAYWCWeA", demo: "https://www.youtube.com/watch?v=PCc794Euizo" },
   { song: "Shivers", dance: "Gives Me Shivers", level: "H Beg", tutorial: "https://www.youtube.com/watch?v=6X0d0tmt4E0", demo: "https://www.youtube.com/watch?v=_z-l8u6K95c" },
   { song: "Crank It Up", dance: "Goin' Ham", level: "Beg", tutorial: "https://www.youtube.com/watch?v=ovQSLv_LcZA", demo: "https://www.youtube.com/watch?v=zBQqXiaa0hc" },
   { song: "Good Time", dance: "Good Time", level: "Beg", tutorial: "https://youtu.be/_GT9-AcfQPY?si=ZbF_hk1A_yTUTrrY", demo: "https://youtu.be/8kWAJjX28_4?si=cC0HkVVc4qFm5d5-" },
