@@ -20,13 +20,19 @@
 - **Problem**: `.github/workflows/deploy.yml` had `url: \${{ steps.deployment.outputs.page_url }}` — the backslash escaped the expression, so GitHub logged the literal `\http://tripprobbins.com/` and refused to render it as a link in the workflow graph.
 - **Fix**: Removed the backslash. Annotation is gone.
 
-### 5. Commits (all deployed to `main`)
+### 5. New Musing (`musing_09`, "The Lucky's Ghosts release")
+- **Content**: The CIG clearance delay behind the Book 2 release, the Authors Guild "Human Authored" badge now on the covers, and the editorial policy behind it — AI used for feedback and discussion only, never to write text.
+- **Process**: Drafted in `musing-draft.md` and compiled with `npm run add-musing`, which auto-assigned `musing_09` / `2026.07.30` and reset the draft template.
+
+### 6. Commits (all deployed to `main`)
 - `e9d3c2b` — Amazon announcement + new cover art
 - `1b411f8` — `FICTION_INTEL_LINK` caption
 - `2f80d56` — Workflow environment URL
 - `e645033` — Fiction page: chapters out, Ghosts entry in
+- `ed0733c` — Session notes
+- `63a4f74` — Musing 09
 
-### 6. Known Loose Ends
+### 7. Known Loose Ends
 - **`dist/` is gitignored but still tracked** — committed before the ignore rule, so it dirties `git status` after every build. Production is unaffected (Actions builds fresh from source). `git rm -r --cached dist` would settle it.
 - **`extract_chapters.py` / `extracted_text.txt`** remain in the repo root. The script is obsolete (points outside the repo); the .txt holds Chapter 2–3 draft prose.
 - **Cover originals**: The two working copies in the repo root were deleted. The only remaining copy of the web-sized cover is `public/assets/luckys-ghosts-cover-v2.jpg` — keep the full-resolution original backed up elsewhere.
