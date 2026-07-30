@@ -24,18 +24,25 @@
 - **Content**: The CIG clearance delay behind the Book 2 release, the Authors Guild "Human Authored" badge now on the covers, and the editorial policy behind it — AI used for feedback and discussion only, never to write text.
 - **Process**: Drafted in `musing-draft.md` and compiled with `npm run add-musing`, which auto-assigned `musing_09` / `2026.07.30` and reset the draft template.
 
-### 6. Commits (all deployed to `main`)
+### 6. Repo Cleanup
+- **Untracked `dist/`**: The folder was committed before `.gitignore` listed it, and gitignore doesn't apply to already-tracked files — so every local build dirtied `git status` with ~19 files. Ran `git rm -r --cached dist`; the folder stays on disk, Git just stops watching it. Verified a rebuild now leaves the tree clean.
+- **Safe because**: Actions runs `npm run build` on its own runner and deploys that output, so the committed `dist/` was never read by production. The custom domain comes from `public/CNAME` (still tracked), which Vite copies into `dist` on every build — checked before committing, since a missing CNAME is how Pages custom domains silently break.
+- **Deleted `extract_chapters.py` and `extracted_text.txt`**: The script scraped the draft chapters out of the old site's HTML and was hardcoded to a path outside the repo; the .txt was its output, HTML tags and all. Both obsolete now that the chapter reader is gone. Recoverable from Git history if ever needed.
+
+### 7. Commits (all deployed to `main`)
 - `e9d3c2b` — Amazon announcement + new cover art
 - `1b411f8` — `FICTION_INTEL_LINK` caption
 - `2f80d56` — Workflow environment URL
 - `e645033` — Fiction page: chapters out, Ghosts entry in
 - `ed0733c` — Session notes
 - `63a4f74` — Musing 09
+- `29ba304` — Session notes: musing 09
+- `ff06817` — Untrack `dist/`, remove chapter extraction files
 
-### 7. Known Loose Ends
-- **`dist/` is gitignored but still tracked** — committed before the ignore rule, so it dirties `git status` after every build. Production is unaffected (Actions builds fresh from source). `git rm -r --cached dist` would settle it.
-- **`extract_chapters.py` / `extracted_text.txt`** remain in the repo root. The script is obsolete (points outside the repo); the .txt holds Chapter 2–3 draft prose.
-- **Cover originals**: The two working copies in the repo root were deleted. The only remaining copy of the web-sized cover is `public/assets/luckys-ghosts-cover-v2.jpg` — keep the full-resolution original backed up elsewhere.
+### 8. Notes for Next Time
+- **High-res cover**: The repo holds only the 600px web version (`public/assets/luckys-ghosts-cover-v2.jpg`). The full-resolution original lives on Tripp's PC — confirmed July 30.
+- **`site_source.html`** (370kB) is still in the repo root: a snapshot of the pre-Vite site, kept as reference. Not referenced by any page.
+- **Musings workflow**: draft in `musing-draft.md`, run `npm run add-musing`. The script auto-assigns the next ID and today's date, then resets the draft template.
 
 ## Session: May 26, 2026
 
