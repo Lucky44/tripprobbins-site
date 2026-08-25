@@ -819,6 +819,31 @@ h2 {
   transform: translateX(4px);
 }
 
+/* Inline links inside musing copy — the feed summary and the modal body.
+   Scoped to <p> in the feed so the ACCESS_DATA_LOG trigger keeps its
+   .glass-link styling. :visited is set explicitly or the browser default
+   (#551A8B) renders near-invisible on the dark panel. */
+.musing-item p a,
+.musing-full-body a {
+  color: var(--accent-color);
+  text-decoration: underline;
+  text-underline-offset: 0.15em;
+  text-decoration-color: rgba(6, 182, 212, 0.4);
+  transition: color 0.2s ease, text-decoration-color 0.2s ease, text-shadow 0.2s ease;
+}
+
+.musing-item p a:visited,
+.musing-full-body a:visited {
+  color: var(--accent-color);
+}
+
+.musing-item p a:hover,
+.musing-full-body a:hover {
+  color: #67e8f9;
+  text-decoration-color: #67e8f9;
+  text-shadow: 0 0 8px var(--accent-glow);
+}
+
 /* Featured Book Presentation */
 .book-cover-frame {
   transition: transform 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
