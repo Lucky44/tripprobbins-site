@@ -1,5 +1,28 @@
 # Personal Website - Session Notes
 
+## Session: August 25, 2026
+
+### 1. Home Page: "What's Current" Rebuilt Around the New Covers
+- **Image**: Swapped the single Ghosts cover for `First-2-trilogy.png` (474x363), a side-by-side of both covers. Since it is landscape rather than portrait, the frame's `max-width` went from 214px to 420px — at the old width each book would have rendered ~100px across, too small to read the titles. Renders at 422px, just under native, so no upscaling blur.
+- **Copy**: Headline is now "New Trilogy Covers"; subhead "The first two Citizens and Denizens books have series covers!"; body covers the Alicia Vogel art and the three available formats.
+- **Amazon button**: Relabeled "Have a Look" (CSS uppercases it to HAVE A LOOK) and repointed at `https://www.amazon.com/dp/B0H6CJYN1C`. Trimmed the `qid`/`sr`/`ref` tracking params off the supplied URL — they are per-search session junk — and dropped `binding=kindle_edition`, which forces the Kindle listing and would have contradicted the "paperback, hard cover and Kindle" copy. Bare `/dp/` lands on the detail page with all three formats.
+- **Enter Sector**: Left untouched, still to `/fiction.html`.
+
+### 2. New Musing (`musing_10`, "TRILOGY 2/3 READY")
+- **Content**: The story behind the new Stars cover — Alicia Vogel proposing a connected cover, the editor's note about American audiences preferring characters on covers, both covers carrying the Authors Guild "Human Authored" badge, and a newsletter plug.
+- **Newsletter link**: The closing line asks readers to sign up but had nowhere to click. Linked to `/makecontact.html`, where the beehiiv signup panel lives. Used a relative path rather than the absolute `https://tripprobbins.com/...` so the link stays on localhost during development instead of jumping to production. Deliberately *not* `#newsletter` — that section is injected by JS after the browser resolves the hash, so the anchor would not reliably scroll.
+
+### 3. Fiction Page: New Lucky's Stars Cover
+- **Asset**: Now `LS-cover-10b-600.jpg` (600x915, 218KB), exported from the Photoshop master at 600px wide, sRGB, metadata stripped.
+- **Why not just use the PNG**: The supplied `LS-2nd-cover.png` was 548x849 and 721KB for a slot that displays at 188px — the largest asset on the page, and a PNG of a painted illustration, which is the wrong format for gradient-heavy art. An interim JPEG re-encode got it to 94KB, but exporting fresh from the master was better still: a true downsample rather than a re-encode of an already-reduced image.
+- **Why not 188px**: 188px is the CSS width. On 2x/3x displays a 188px asset upscales and goes soft. 600px matches the Ghosts cover and is ~3x the display size.
+- **Bonus**: Both covers are now 600px natives, so the cards render 287px and 284px tall — down from a 7px mismatch to 3px.
+
+### 4. Notes for Next Time
+- **Left-edge artifact**: The Stars cover master has a sliver of a cut-off letter on the left edge, roughly 90% of the way down. Survived the re-export, so it is in the source file. Invisible at 188px display size.
+- **Unreferenced cover assets still in `public/assets/`**: `LS-2nd-cover.png` (721KB, untracked), `luckys-stars-cover.png` (181KB), `luckys-stars-cover.jpg` (257KB). ~1.1MB shipping on every build with nothing pointing at them. The two `luckys-stars-cover.*` files are in git history and safe to delete; the PNG is not, so move it out of `public/` if it is wanted as a master.
+- **No image tooling on this machine**: No ImageMagick, ffmpeg, or sharp. The `convert` on PATH is `C:WINDOWSsystem32convert`, the filesystem utility — not an image converter. PowerShell + `System.Drawing` works for one-off re-encodes.
+
 ## Session: July 30, 2026
 
 ### 1. Home Page: "What's Current" Announcement
