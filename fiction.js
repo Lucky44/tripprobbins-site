@@ -14,7 +14,7 @@ fictionContent.innerHTML = `
       <h2>Citizens & Denizens</h2>
       <div class="featured-book">
         <div class="book-card-visual">
-          <img src="/assets/luckys-stars-cover.png" alt="Lucky's Stars Book Cover" id="book-cover-img" onerror="this.style.display='none'; this.parentElement.innerText='LUCKY\\'S STARS'; textShadow='0 0 10px var(--accent-glow)'">
+          <img src="/assets/LS-cover-10b-600.jpg" alt="Lucky's Stars Book Cover" id="book-cover-img" onerror="this.style.display='none'; this.parentElement.innerText='LUCKY\\'S STARS'; textShadow='0 0 10px var(--accent-glow)'">
         </div>
         <div class="book-info">
           <h3>Lucky's Stars (Book 1)</h3>

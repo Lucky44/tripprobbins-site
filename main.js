@@ -25,26 +25,26 @@ homeContent.innerHTML = `
         <h2 style="border: none; padding: 0;">What's Current</h2>
         
         <div class="featured-book-container" style="margin-top: 3rem; flex-grow: 1; display: flex; flex-direction: column; align-items: center; text-align: center; gap: 2rem;">
-          <div class="book-cover-frame" style="width: 100%; max-width: 214px; position: relative;">
+          <div class="book-cover-frame" style="width: 100%; max-width: 420px; position: relative;">
             <div class="corner-brackets small"></div>
-            <img src="assets/luckys-ghosts-cover-v2.jpg" alt="Lucky's Ghosts Cover" style="width: 100%; border-radius: 4px; box-shadow: 0 0 20px rgba(6, 182, 212, 0.3); display: block; image-rendering: -webkit-optimize-contrast;">
+            <img src="assets/First-2-trilogy.png" alt="Lucky's Stars and Lucky's Ghosts covers" style="width: 100%; border-radius: 4px; box-shadow: 0 0 20px rgba(6, 182, 212, 0.3); display: block; image-rendering: -webkit-optimize-contrast;">
             <div class="header-coords" style="top: -1.5rem; right: 0;">ID: LS01_C_DEN</div>
           </div>
 
           <div class="book-details" style="max-width: 450px;">
             <div class="mono-accent" style="margin-bottom: 1rem;">PROJECT: CITIZENS_&_DENIZENS</div>
-            <h3 class="scifi-font" style="font-size: 1.5rem; color: var(--accent-color); margin-bottom: 1.5rem;">Lucky's Ghosts</h3>
+            <h3 class="scifi-font" style="font-size: 1.5rem; color: var(--accent-color); margin-bottom: 1.5rem;">New Trilogy Covers</h3>
             <p style="font-size: 1.1rem; line-height: 1.6; color: var(--text-primary); margin-bottom: 1.5rem;">
-              Book 2 of the Citizens and Denizens trilogy is now available on Amazon!
+              The first two Citizens and Denizens books have series covers!
             </p>
 
-            <a href="https://a.co/d/0ftshYQL" target="_blank" rel="noopener" class="amazon-link scifi-font">
+            <a href="https://www.amazon.com/dp/B0H6CJYN1C" target="_blank" rel="noopener" class="amazon-link scifi-font">
               <span class="mono-accent amazon-link-label">ACQUIRE // AMZN_LINK</span>
-              <span class="amazon-link-title">Get Lucky's Ghosts</span>
+              <span class="amazon-link-title">Have a Look</span>
             </a>
 
             <p style="font-size: 1.1rem; line-height: 1.6; color: var(--text-primary); margin-bottom: 2rem;">
-              The adventure continues as Lucky, Salty and Zero get tangled up with three factions vying for control of a new (and growing) high-level AI, and they're all ready to burn worlds to get it. The crew is faced with impossible choices - friendships, ethics and their creativity will be tested.
+              Lucky's Stars has a new cover by artist Alicia Vogel. It matches the style of Lucky's Ghosts, which she also illustrated. Both books are available on Amazon in paperback, hard cover and Kindle formats.
             </p>
 
             <a href="/fiction.html" class="cta-button primary" style="width: 100%; max-width: 300px;">Enter Sector</a>
